@@ -1,7 +1,14 @@
 package board
 
 import (
+	"log"
 	"strconv"
+)
+
+var (
+	Info    *log.Logger
+	Warning *log.Logger
+	Error   *log.Logger
 )
 
 type tile int
@@ -31,17 +38,18 @@ func (b *Board) initiate() {
 		r := make([]tile, b.size, b.size)
 		b.Rows[i] = r
 		for j := 0; j < b.size; j++ {
-			b.Rows[i][j] = 1
+			b.Rows[i][j] = 0
 		}
 	}
 }
 
 func (b *Board) String() string {
-	str := ""
+	str := "\n"
 	for i := 0; i < b.size; i++ {
 		for j := 0; j < b.size; j++ {
 			str += b.Rows[i][j].String() + " "
 		}
+		str += "\n"
 	}
 	return str
 }
