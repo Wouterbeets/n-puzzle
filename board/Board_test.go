@@ -16,13 +16,15 @@ func TestInput(t *testing.T) {
 			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
 			want:  "\n1 2 3\n4 5 6\n7 8 0\n",
 			err:   nil,
-		},
-		{
+		}, {
 			input: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 0},
 			want:  "\n0 0 0\n0 0 0\n0 0 0\n",
 			err:   errors.New("error"),
-		},
-		{
+		}, {
+			input: []int{},
+			want:  "\n0 0 0\n0 0 0\n0 0 0\n",
+			err:   errors.New("error"),
+		}, {
 			input: []int{0, 1, 2, 3, 4, 5, 6, 7, 8},
 			want:  "\n0 1 2\n3 4 5\n6 7 8\n",
 			err:   nil,
@@ -32,9 +34,86 @@ func TestInput(t *testing.T) {
 	for _, test := range tests {
 		b := New(3)
 		err := b.Input(test.input)
-		plog.Activate(true, true, true, true)
+		plog.Activate(false, false, false, false)
 		if b.String() != test.want || err != nil && test.err == nil || err != nil && test.err == nil {
 			t.Error("input doesn't match value", test.input, "expected", test.want, "\ngot\n", b.String(), "err:", err, "err want", test.err)
 		}
 	}
+}
+
+func TestCheckNumbers(t *testing.T) {
+	var tests = []struct {
+		size  int
+		input []int
+		err   error
+	}{
+		{
+			size:  3,
+			input: []int{1, 0, 3, 4, 5, 6, 7, 2, 0},
+			err:   errors.New("error"),
+		},
+		{
+			size:  3,
+			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
+			err:   nil,
+		},
+	}
+	for _, test := range tests {
+		b := New(test.size)
+		err := b.checkNumbers(test.input)
+		if err == nil && test.err != nil || err != nil && test.err == nil {
+			t.Error("input produces wrong error return", test.input, "expected", test.err, "\ngot\n", err)
+		}
+	}
+}
+
+func TestMove(t *testing.T) {
+	var tests = []struct {
+		size  int
+		input []int
+		want  string
+		move  int
+		err   error
+	}{
+		{
+			size:  3,
+			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
+			want:  "\n1 2 3\n4 5 6\n7 8 0\n",
+			move:  Up,
+			err:   errors.New("error"),
+		}, {
+			size:  3,
+			input: []int{1, 2, 3, 4, 5, 0, 7, 8, 6},
+			want:  "\n1 2 3\n4 0 5\n7 8 6\n",
+			move:  Right,
+			err:   nil,
+		}, {
+			size:  3,
+			input: []int{1, 2, 3, 0, 5, 6, 7, 8, 4},
+			want:  "\n1 2 3\n5 0 6\n7 8 4\n",
+			move:  Left,
+			err:   nil,
+		}, {
+			size:  3,
+			input: []int{0, 2, 3, 4, 5, 6, 7, 8, 1},
+			want:  "\n4 2 3\n0 5 6\n7 8 1\n",
+			move:  Up,
+			err:   nil,
+		}, {
+			size:  3,
+			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
+			want:  "\n1 2 3\n4 5 0\n7 8 6\n",
+			move:  Down,
+			err:   nil,
+		},
+	}
+	for _, test := range tests {
+		b := New(test.size)
+		b.Input(test.input)
+		err := b.Move(test.move)
+		if b.String() != test.want || err != nil && test.err == nil || err != nil && test.err == nil {
+			t.Error("Move fail", test.input, "expected", test.want, "\ngot\n", b.String(), "err:", err, "err want", test.err)
+		}
+	}
+
 }
