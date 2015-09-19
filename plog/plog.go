@@ -30,19 +30,18 @@ func Activate(ShowInfo bool, ShowWarning bool, ShowError bool, Verbose bool) {
 
 	if Verbose == true {
 		ShowInfo, ShowError, ShowWarning = true, true, true
-		fmt.Println("Verbose = ", Verbose)
 	}
 	iFile, err := os.Create("infoLog")
 	if err != nil {
 		fmt.Println(err)
 		iFile = ioutil.Discard
 	}
-	eFile, err = os.Create("warningLog")
+	wFile, err = os.Create("warningLog")
 	if err != nil {
 		fmt.Println(err)
 		eFile = ioutil.Discard
 	}
-	wFile, err = os.Create("errLog")
+	eFile, err = os.Create("errLog")
 	if err != nil {
 		fmt.Println(err)
 		wFile = ioutil.Discard
