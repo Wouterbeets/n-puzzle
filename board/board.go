@@ -1,14 +1,11 @@
 package board
 
 import (
-	"log"
+	"errors"
+	"github.com/Wouterbeets/n-puzzle/plog"
+	"math"
 	"strconv"
-)
-
-var (
-	Info    *log.Logger
-	Warning *log.Logger
-	Error   *log.Logger
+	"strings"
 )
 
 type tile int
@@ -49,7 +46,23 @@ func (b *Board) String() string {
 		for j := 0; j < b.size; j++ {
 			str += b.Rows[i][j].String() + " "
 		}
+		str = strings.Trim(str, " ")
 		str += "\n"
 	}
 	return str
+}
+
+func (b *Board) Input(values []int) error {
+	if len(values) != b.size*b.size {
+		err := errors.New("length of board values does not match size of board")
+		plog.Error.Println(err)
+		return err
+	}
+	for i := 0; i < b.size; i++ {
+		for j := 0; j < b.size; j++ {
+			b.Rows[i][j] = tile(values[i*b.size+j])
+		}
+	}
+	plog.Info.Println("input values are:", values, "board is:", b)
+	return nil
 }
