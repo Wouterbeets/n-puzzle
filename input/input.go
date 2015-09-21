@@ -2,8 +2,9 @@ package input
 
 import (
 	"bufio"
-	"bytes"
 	"fmt"
+	"github.com/Wouterbeets/n-puzzle/plog"
+	"io"
 	"os"
 	"strconv"
 	"unicode/utf8"
@@ -31,6 +32,17 @@ func isSpace(r rune) bool {
 	return false
 }
 
+func skipComment(start int, data []byte) int {
+	for width, i := 0, start; i < len(data); i += width {
+		var r rune
+		r, width = utf8.DecodeRune(data[i:])
+		if r == '\n' {
+			return i + width
+		}
+	}
+	return 0
+}
+
 //Slightly modified standard lib function, it also terminates words at '#' for comments in de middle of lines
 func scanWords(data []byte, atEOF bool) (advance int, token []byte, err error) {
 	// Skip leading spaces.
@@ -49,25 +61,18 @@ func scanWords(data []byte, atEOF bool) (advance int, token []byte, err error) {
 	}
 	//if state is comment we continue until end of line
 	if comment == true {
-		for width, i := 0, start; i < len(data); i += width {
-			var r rune
-			r, width = utf8.DecodeRune(data[i:])
-			if r == '\n' {
-				return i + width, data[start:i], nil
-			}
+		start = skipComment(start, data)
+	}
+	// Scan until space, marking end of word.
+	for width, i := 0, start; i < len(data); i += width {
+		var r rune
+		r, width = utf8.DecodeRune(data[i:])
+		//			also marks end of word at #
+		if r == '#' {
+			return i, data[start:i], nil
 		}
-	} else {
-		// Scan until space, marking end of word.
-		for width, i := 0, start; i < len(data); i += width {
-			var r rune
-			r, width = utf8.DecodeRune(data[i:])
-			//			also marks end of word at #
-			if r == '#' {
-				return i, data[start:i], nil
-			}
-			if isSpace(r) {
-				return i + width, data[start:i], nil
-			}
+		if isSpace(r) {
+			return i + width, data[start:i], nil
 		}
 	}
 	// If we're at EOF, we have a final, non-empty, non-terminated word. Return it.
@@ -78,23 +83,31 @@ func scanWords(data []byte, atEOF bool) (advance int, token []byte, err error) {
 	return start, nil, nil
 }
 
-func GetInput() {
-	scanner := bufio.NewScanner(os.Stdin)
-	split := func(data []byte, atEOF bool) (advance int, token []byte, err error) {
-		advance, token, err = scanWords(data, atEOF)
-		if err == nil && token != nil && bytes.Contains(token, []byte("#")) == false {
-			_, err = strconv.ParseInt(string(token), 10, 32)
-		}
-		return
-	}
-	scanner.Split(split)
-	i := 0
+func GetInput(r io.Reader) (int, []int, error) {
+	scanner := bufio.NewScanner(r)
+	scanner.Split(scanWords)
+	ret := make([]int, 0, 0)
+	size := -1
 	for scanner.Scan() {
-		fmt.Print(scanner.Text())
-		i++
-		fmt.Println("\t", i)
+		token := scanner.Text()
+		if token == "" {
+			continue
+		}
+		t, err := strconv.Atoi(token)
+		if err != nil {
+			plog.Error.Println(err)
+			return size, ret, err
+		}
+		if size == -1 {
+			size = t
+		} else {
+			ret = append(ret, t)
+		}
 	}
 	fmt.Println("reading standard input:", scanner.Err())
 	if err := scanner.Err(); err != nil {
+		plog.Error.Println(err)
+		return size, ret, err
 	}
+	return size, ret, nil
 }

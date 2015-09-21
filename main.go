@@ -5,6 +5,7 @@ import (
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
+	"os"
 )
 
 var (
@@ -24,13 +25,19 @@ func init() {
 func main() {
 	flag.Parse()
 	plog.Activate(ShowInfo, ShowWarning, ShowError, Verbose)
-
-	b := board.New(3)
-	b.Input([]int{0, 1, 2, 3, 4, 5, 6, 7, 8})
+	size, input, err := input.GetInput(os.Stdin)
+	if err != nil {
+		plog.Error.Println(err)
+		return
+	}
+	b := board.New(size)
+	b.Input(input)
 	plog.Info.Println("board initailised", b)
-	input.GetInput()
 	b.Move(board.Up)
+	plog.Info.Println(b.GetH())
 	b.Move(board.Left)
+	plog.Info.Println(b.GetH())
 	b.Move(board.Down)
+	plog.Info.Println(b.GetH())
 	b.Move(board.Right)
 }

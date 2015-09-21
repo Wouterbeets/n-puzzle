@@ -1,33 +1,36 @@
-INFO : 16:03:23 board.go:47: board initiated
-INFO : 16:03:23 board.go:89: length checked
-INFO : 16:03:23 board.go:110: numbers checked
-INFO : 16:03:23 board.go:80: input values are succesfully imported to board [0 1 2 3 4 5 6 7 8]
-INFO : 16:03:23 main.go:30: board initailised 
-0 1 2
-3 4 5
-6 7 8
+INFO : 14:23:05 board.go:49: board initiated
+INFO : 14:23:05 board.go:104: length checked
+INFO : 14:23:05 board.go:125: numbers checked
+INFO : 14:23:05 board.go:95: input values are succesfully imported to board [0 2 5 3 4 1 7 8 6]
+INFO : 14:23:05 main.go:34: board initailised 
+0 2 5
+3 4 1
+7 8 6
 
-INFO : 16:03:23 board.go:137: Up
-INFO : 16:03:23 board.go:124: 
-3 1 2
-0 4 5
-6 7 8
+INFO : 14:23:05 board.go:151: Up
+INFO : 14:23:05 board.go:139: 
+3 2 5
+0 4 1
+7 8 6
 
-INFO : 16:03:23 board.go:161: Left
-INFO : 16:03:23 board.go:124: 
-3 1 2
-4 0 5
-6 7 8
+INFO : 14:23:05 main.go:36: 15
+INFO : 14:23:05 board.go:175: Left
+INFO : 14:23:05 board.go:139: 
+3 2 5
+4 0 1
+7 8 6
 
-INFO : 16:03:23 board.go:149: Down
-INFO : 16:03:23 board.go:124: 
-3 0 2
-4 1 5
-6 7 8
+INFO : 14:23:05 main.go:38: 16
+INFO : 14:23:05 board.go:163: Down
+INFO : 14:23:05 board.go:139: 
+3 0 5
+4 2 1
+7 8 6
 
-INFO : 16:03:23 board.go:173: Right
-INFO : 16:03:23 board.go:124: 
-0 3 2
-4 1 5
-6 7 8
+INFO : 14:23:05 main.go:40: 14
+INFO : 14:23:05 board.go:187: Right
+INFO : 14:23:05 board.go:139: 
+0 3 5
+4 2 1
+7 8 6
 
