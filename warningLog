@@ -1,138 +1,1956 @@
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:179: cannot slide up with the blanc tile on bottom row
-WARNING : 16:42:14 board.go:259: move 0 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:201: cannot slide left  with the blanc tile on right collumn
-WARNING : 16:42:14 board.go:259: move 2 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:190: cannot slide down with the blanc tile on top row
-WARNING : 16:42:14 board.go:259: move 1 not possible
-WARNING : 16:42:14 board.go:212: cannot slide right  with the blanc tile on left collumn
-WARNING : 16:42:14 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible
+WARNING : 22:33:38 board.go:190: cannot slide down with the blanc tile on top row
+WARNING : 22:33:38 board.go:259: move 1 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:201: cannot slide left  with the blanc tile on right collumn
+WARNING : 22:33:38 board.go:259: move 2 not possible
+WARNING : 22:33:38 board.go:179: cannot slide up with the blanc tile on bottom row
+WARNING : 22:33:38 board.go:259: move 0 not possible
+WARNING : 22:33:38 board.go:212: cannot slide right  with the blanc tile on left collumn
+WARNING : 22:33:38 board.go:259: move 3 not possible

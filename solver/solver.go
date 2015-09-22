@@ -113,35 +113,31 @@ func New(st State) *Solver {
 		g:      0,
 	}
 	currentNode.f = currentNode.g + currentNode.h
-	plog.Info.Println("made new Node", currentNode)
+	//plog.Info.Println("made new Node", currentNode)
 	s.BoardStates[st.StateString()] = StateNode{st: st, n: currentNode}
 	heap.Push(s.OpenList, currentNode)
 	s.OpenListBool[currentNode.key] = true
 	s.Goal = st.GoalString()
-	plog.Info.Printf("made new solver %#v", s)
+	//plog.Info.Printf("made new solver %#v", s)
 	return s
 }
 
 func (s *Solver) Solve() {
-	count := 0
-	//var start State
+
 	plog.Info.Println("Goal is", s.Goal)
-	for len(*s.OpenList) > 0 && count < 50 {
-		count++
-		plog.Info.Println("len openlist is", len(*s.OpenList))
+	for len(*s.OpenList) > 0 {
+
 		cNode := heap.Pop(s.OpenList).(*Node)
 		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
-		//	if count == 0 {
-		//		start = cNode.State.Copy()
-		//	}
+
 		if cNode.key == s.Goal {
 			plog.Info.Println("solition reached")
 			os.Exit(1)
 		}
+
 		//add to closed list and remove from open list
 		s.OpenListBool[cNode.key] = false
 		s.ClosedList[cNode.key] = true
-		plog.Info.Println("putting node in closed list")
 
 		moves := s.BoardStates[cNode.key].st.GetMoves()
 		plog.Info.Println("got moves, len is", len(moves))
@@ -154,30 +150,30 @@ func (s *Solver) Solve() {
 				parent: cNode,
 			}
 			newNode.f = newNode.g + newNode.h
-			s.BoardStates[newNode.key] = StateNode{
-				st: moves[i],
-				n:  newNode,
-			}
-			plog.Info.Println(moves[i], "f=", newNode.f)
+
 			// check if node is in closed list
 			if s.ClosedList[newNode.key] == false {
-				//plog.Info.Println(newNode.key)
+
 				// ckeck if node is in open list, if not add
 				if s.OpenListBool[newNode.key] == false {
-					//plog.Info.Println("node", newNode, "added to open list")
+					plog.Info.Println("node", newNode, "added to open list with f", newNode.f)
 					s.OpenListBool[newNode.key] = true
 					heap.Push(s.OpenList, newNode)
 				} else if s.BoardStates[newNode.key].n.g > newNode.g {
-					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
 					plog.Info.Println("node", newNode, "found a shorter way, updated")
+					plog.Info.Println("new", newNode.g, "old = ", s.BoardStates[newNode.key].n.g)
+					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
 				} else {
 
 					plog.Info.Println("new", newNode.g, "old = ", s.BoardStates[newNode.key].n.g)
 				}
 			} else {
-				plog.Info.Println("node", newNode, "already in closed list")
+				plog.Info.Println("node", newNode, "already in closed list f", newNode.f)
+			}
+			s.BoardStates[newNode.key] = StateNode{
+				st: moves[i],
+				n:  newNode,
 			}
 		}
-		plog.Info.Println("\n")
 	}
 }
