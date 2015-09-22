@@ -47,8 +47,8 @@ type Board struct {
 	HeurFun func() int
 }
 
-func (b *Board) Copy() Board {
-	r := Board{
+func (b *Board) Copy() *Board {
+	r := &Board{
 		size:    b.size,
 		BR:      b.BR,
 		BC:      b.BC,
@@ -170,7 +170,7 @@ func (b *Board) Move(dir int) error {
 			return err
 		}
 	}
-	plog.Info.Println(b)
+	//plog.Info.Println(b)
 	return nil
 }
 
@@ -242,13 +242,20 @@ func (b *Board) GetH() int {
 	return b.HeurFun()
 }
 
-func (b *Board) GetMoves() []Board {
-	ret := make([]Board, 0, 4)
-	for i := 0; i > 4; i++ {
+func (b *Board) Test() solver.State {
+	ret := New(3)
+	return ret
+}
+
+func (b *Board) GetMoves() []solver.State {
+	ret := make([]solver.State, 0, 4)
+	for i := 0; i < 4; i++ {
 		move := b.Copy()
 		err := move.Move(i)
 		if err == nil {
 			ret = append(ret, move)
+		} else {
+			plog.Warning.Println("move", i, "not possible")
 		}
 	}
 	return ret

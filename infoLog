@@ -1,36 +1,121 @@
-INFO : 14:23:05 board.go:49: board initiated
-INFO : 14:23:05 board.go:104: length checked
-INFO : 14:23:05 board.go:125: numbers checked
-INFO : 14:23:05 board.go:95: input values are succesfully imported to board [0 2 5 3 4 1 7 8 6]
-INFO : 14:23:05 main.go:34: board initailised 
-0 2 5
-3 4 1
-7 8 6
+INFO : 12:16:48 board.go:74: board initiated
+INFO : 12:16:48 board.go:138: length checked
+INFO : 12:16:48 board.go:159: numbers checked
+INFO : 12:16:48 board.go:129: input values are succesfully imported to board [1 6 0 2 3 7 5 4 8]
+INFO : 12:16:48 main.go:36: board initailised 
+1 6 0
+2 3 7
+5 4 8
 
-INFO : 14:23:05 board.go:151: Up
-INFO : 14:23:05 board.go:139: 
-3 2 5
-0 4 1
-7 8 6
-
-INFO : 14:23:05 main.go:36: 15
-INFO : 14:23:05 board.go:175: Left
-INFO : 14:23:05 board.go:139: 
-3 2 5
-4 0 1
-7 8 6
-
-INFO : 14:23:05 main.go:38: 16
-INFO : 14:23:05 board.go:163: Down
-INFO : 14:23:05 board.go:139: 
-3 0 5
-4 2 1
-7 8 6
-
-INFO : 14:23:05 main.go:40: 14
-INFO : 14:23:05 board.go:187: Right
-INFO : 14:23:05 board.go:139: 
-0 3 5
-4 2 1
-7 8 6
-
+INFO : 12:16:48 solver.go:116: made new Node &{<nil> 8 0 8 3 1 6 02 3 75 4 8 0}
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:119: !!!!!! [0x208212280]
+INFO : 12:16:48 solver.go:122: made new solver &solver.Solver{BoardStates:map[string]solver.StateNode{"3 1 6 02 3 75 4 8":solver.StateNode{st:(*board.Board)(0x2082121c0), n:(*solver.Node)(0x208212280)}}, OpenList:(*solver.PriorityQueue)(0x2081de260), OpenListBool:map[string]bool{"3 1 6 02 3 75 4 8":true}, ClosedList:map[string]bool{}, Goal:"3 0 1 23 4 56 7 8"}
+INFO : 12:16:48 solver.go:129: Goal is 3 0 1 23 4 56 7 8
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{<nil> 8 0 8 3 1 6 02 3 75 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:221: Right
+INFO : 12:16:48 solver.go:147: got moves, len is 2
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208212280 11 1 10 3 1 7 62 3 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208212280 11 1 10 3 1 7 62 3 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 board.go:221: Right
+INFO : 12:16:48 solver.go:147: got moves, len is 3
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x2082125c0 14 2 12 3 6 1 32 7 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:149: checking move 2
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x2082125c0 14 2 12 3 6 1 32 7 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 solver.go:147: got moves, len is 2
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208212840 17 3 14 3 1 2 36 7 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208212840 17 3 14 3 1 2 36 7 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 board.go:221: Right
+INFO : 12:16:48 solver.go:147: got moves, len is 3
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208212b40 18 4 14 3 3 1 76 2 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:149: checking move 2
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208212b40 18 4 14 3 3 1 76 2 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 solver.go:147: got moves, len is 2
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208212dc0 17 5 12 3 1 6 73 2 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208212dc0 17 5 12 3 1 6 73 2 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 board.go:221: Right
+INFO : 12:16:48 solver.go:147: got moves, len is 3
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x2082130c0 24 6 18 3 7 1 23 6 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:149: checking move 2
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x2082130c0 24 6 18 3 7 1 23 6 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 solver.go:147: got moves, len is 2
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208213340 21 7 14 3 1 3 27 6 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208213340 21 7 14 3 1 3 27 6 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 board.go:221: Right
+INFO : 12:16:48 solver.go:147: got moves, len is 3
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:166: node &{0x208213640 20 8 12 3 2 1 67 3 05 4 8 0} added to open list
+INFO : 12:16:48 solver.go:25: len pq = 0
+INFO : 12:16:48 solver.go:29: len pq = 1
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:149: checking move 2
+INFO : 12:16:48 solver.go:132: len is 1
+INFO : 12:16:48 solver.go:134: getting node with lowest f &{0x208213640 20 8 12 3 2 1 67 3 05 4 8 -1}
+INFO : 12:16:48 solver.go:144: putting node in closed list
+INFO : 12:16:48 board.go:185: Up
+INFO : 12:16:48 board.go:209: Left
+INFO : 12:16:48 solver.go:147: got moves, len is 2
+INFO : 12:16:48 solver.go:149: checking move 0
+INFO : 12:16:48 solver.go:174: node &{0x2082138c0 19 9 10 3 1 7 62 3 05 4 8 0} already in closed list
+INFO : 12:16:48 solver.go:149: checking move 1
+INFO : 12:16:48 solver.go:174: node &{0x2082138c0 19 9 10 3 1 7 62 3 05 4 8 0} already in closed list
