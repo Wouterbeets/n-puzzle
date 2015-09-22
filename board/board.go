@@ -80,7 +80,6 @@ func (b *Board) StateString() string {
 		for j := 0; j < b.size; j++ {
 			str += b.Rows[i][j].String() + " "
 		}
-		str = strings.Trim(str, " ")
 	}
 	return str
 }
@@ -91,7 +90,6 @@ func (b *Board) GoalString() string {
 		for j := 0; j < b.size; j++ {
 			str += strconv.Itoa(i*b.size+j) + " "
 		}
-		str = strings.Trim(str, " ")
 	}
 	return str
 }
@@ -240,11 +238,6 @@ func (b *Board) manDist() int {
 
 func (b *Board) GetH() int {
 	return b.HeurFun()
-}
-
-func (b *Board) Test() solver.State {
-	ret := New(3)
-	return ret
 }
 
 func (b *Board) GetMoves() []solver.State {

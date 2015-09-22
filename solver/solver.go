@@ -77,6 +77,7 @@ type State interface {
 	GoalString() string
 	GetH() int
 	GetMoves() []State
+	String() string
 }
 
 type Solver struct {
@@ -129,9 +130,9 @@ func (s *Solver) Solve() {
 	plog.Info.Println("Goal is", s.Goal)
 	for len(*s.OpenList) > 0 {
 
-		plog.Info.Println("len is", len(*s.OpenList))
+		plog.Info.Println("len openlist is", len(*s.OpenList))
 		cNode := heap.Pop(s.OpenList).(*Node)
-		plog.Info.Println("getting node with lowest f", cNode)
+		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
 		//	if count == 0 {
 		//		start = cNode.State.Copy()
 		//	}
@@ -174,5 +175,6 @@ func (s *Solver) Solve() {
 				plog.Info.Println("node", newNode, "already in closed list")
 			}
 		}
+		plog.Info.Println("\n")
 	}
 }
