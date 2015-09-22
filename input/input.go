@@ -2,7 +2,6 @@ package input
 
 import (
 	"bufio"
-	"fmt"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"io"
 	//"os"
@@ -104,7 +103,6 @@ func GetInput(r io.Reader) (int, []int, error) {
 			ret = append(ret, t)
 		}
 	}
-	fmt.Println("reading standard input:", scanner.Err())
 	if err := scanner.Err(); err != nil {
 		plog.Error.Println(err)
 		return size, ret, err

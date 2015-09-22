@@ -117,3 +117,25 @@ func TestMove(t *testing.T) {
 	}
 
 }
+
+func TestGetH(t *testing.T) {
+	var tests = []struct {
+		size  int
+		input []int
+		want  int
+	}{
+		{
+			size:  3,
+			input: []int{1, 0, 2, 3, 4, 5, 6, 7, 8},
+			want:  2,
+		},
+	}
+	for _, test := range tests {
+		b := New(test.size)
+		b.Input(test.input)
+		result := b.GetH()
+		if result != test.want {
+			t.Error("heuristic function returns wrong h value", result, test.want)
+		}
+	}
+}

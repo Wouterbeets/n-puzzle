@@ -3,6 +3,7 @@ package solver
 import (
 	"container/heap"
 	"github.com/Wouterbeets/n-puzzle/plog"
+	"os"
 	//	"github.com/Wouterbeets/n-puzzle/board"
 )
 
@@ -22,11 +23,9 @@ func (pq PriorityQueue) Swap(i, j int) {
 
 func (pq *PriorityQueue) Push(x interface{}) {
 	n := len(*pq)
-	plog.Info.Println("len pq =", n)
 	node := x.(*Node)
 	node.index = n
 	*pq = append(*pq, node)
-	plog.Info.Println("len pq =", len(*pq))
 }
 
 func (pq *PriorityQueue) Pop() interface{} {
@@ -117,7 +116,6 @@ func New(st State) *Solver {
 	plog.Info.Println("made new Node", currentNode)
 	s.BoardStates[st.StateString()] = StateNode{st: st, n: currentNode}
 	heap.Push(s.OpenList, currentNode)
-	plog.Info.Println("!!!!!!", *s.OpenList)
 	s.OpenListBool[currentNode.key] = true
 	s.Goal = st.GoalString()
 	plog.Info.Printf("made new solver %#v", s)
@@ -125,11 +123,11 @@ func New(st State) *Solver {
 }
 
 func (s *Solver) Solve() {
-	//count := 0
+	count := 0
 	//var start State
 	plog.Info.Println("Goal is", s.Goal)
-	for len(*s.OpenList) > 0 {
-
+	for len(*s.OpenList) > 0 && count < 50 {
+		count++
 		plog.Info.Println("len openlist is", len(*s.OpenList))
 		cNode := heap.Pop(s.OpenList).(*Node)
 		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
@@ -138,6 +136,7 @@ func (s *Solver) Solve() {
 		//	}
 		if cNode.key == s.Goal {
 			plog.Info.Println("solition reached")
+			os.Exit(1)
 		}
 		//add to closed list and remove from open list
 		s.OpenListBool[cNode.key] = false
@@ -159,17 +158,21 @@ func (s *Solver) Solve() {
 				st: moves[i],
 				n:  newNode,
 			}
+			plog.Info.Println(moves[i], "f=", newNode.f)
 			// check if node is in closed list
-			if _, ok := s.ClosedList[newNode.key]; !ok {
-
+			if s.ClosedList[newNode.key] == false {
+				//plog.Info.Println(newNode.key)
 				// ckeck if node is in open list, if not add
-				if _, ok := s.OpenListBool[newNode.key]; !ok {
-					plog.Info.Println("node", newNode, "added to open list")
+				if s.OpenListBool[newNode.key] == false {
+					//plog.Info.Println("node", newNode, "added to open list")
 					s.OpenListBool[newNode.key] = true
 					heap.Push(s.OpenList, newNode)
-				} else if _, ok := s.OpenListBool[newNode.key]; ok && s.BoardStates[newNode.key].n.g > newNode.g {
+				} else if s.BoardStates[newNode.key].n.g > newNode.g {
 					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
 					plog.Info.Println("node", newNode, "found a shorter way, updated")
+				} else {
+
+					plog.Info.Println("new", newNode.g, "old = ", s.BoardStates[newNode.key].n.g)
 				}
 			} else {
 				plog.Info.Println("node", newNode, "already in closed list")

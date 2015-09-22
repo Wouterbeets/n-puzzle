@@ -26,7 +26,7 @@ func (t tile) String() string {
 type row []tile
 
 func (r row) Copy() row {
-	ret := make(row, len(r), len(r))
+	ret := make([]tile, len(r))
 	copy(ret, r)
 	return ret
 }
@@ -34,8 +34,10 @@ func (r row) Copy() row {
 type Rows []row
 
 func (r Rows) Copy() Rows {
-	ret := make(Rows, len(r), len(r))
-	copy(ret, r)
+	ret := make([]row, len(r))
+	for i := 0; i < len(r); i++ {
+		ret[i] = r[i].Copy()
+	}
 	return ret
 }
 
@@ -49,12 +51,12 @@ type Board struct {
 
 func (b *Board) Copy() *Board {
 	r := &Board{
-		size:    b.size,
-		BR:      b.BR,
-		BC:      b.BC,
-		HeurFun: b.HeurFun,
-		Rows:    b.Rows.Copy(),
+		size: b.size,
+		BR:   b.BR,
+		BC:   b.BC,
+		Rows: b.Rows.Copy(),
 	}
+	r.HeurFun = r.manDist
 	return r
 }
 
@@ -168,7 +170,6 @@ func (b *Board) Move(dir int) error {
 			return err
 		}
 	}
-	//plog.Info.Println(b)
 	return nil
 }
 
@@ -180,7 +181,6 @@ func (b *Board) moveUp() error {
 	}
 	b.Rows[b.BR][b.BC], b.Rows[b.BR+1][b.BC] = b.Rows[b.BR+1][b.BC], b.Rows[b.BR][b.BC]
 	b.BR++
-	plog.Info.Println("Up")
 	return nil
 }
 
@@ -192,7 +192,6 @@ func (b *Board) moveDown() error {
 	}
 	b.Rows[b.BR][b.BC], b.Rows[b.BR-1][b.BC] = b.Rows[b.BR-1][b.BC], b.Rows[b.BR][b.BC]
 	b.BR--
-	plog.Info.Println("Down")
 	return nil
 }
 
@@ -204,7 +203,6 @@ func (b *Board) moveLeft() error {
 	}
 	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC+1] = b.Rows[b.BR][b.BC+1], b.Rows[b.BR][b.BC]
 	b.BC++
-	plog.Info.Println("Left")
 	return nil
 }
 
@@ -216,7 +214,6 @@ func (b *Board) moveRight() error {
 	}
 	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC-1] = b.Rows[b.BR][b.BC-1], b.Rows[b.BR][b.BC]
 	b.BC--
-	plog.Info.Println("Right")
 	return nil
 }
 
@@ -230,14 +227,25 @@ func (b *Board) manDist() int {
 		for j := 0; j < b.size; j++ {
 			fx := b.Rows[i][j].val % b.size
 			fy := b.Rows[i][j].val / b.size
-			h += solver.CalcMD(i, j, fx, fy)
+			h += solver.CalcMD(j, i, fx, fy)
+			//plog.Info.Println("val =", b.Rows[i][j].val, "fx", fx, "fy", fy, "h", h)
 		}
 	}
 	return h
 }
 
 func (b *Board) GetH() int {
-	return b.HeurFun()
+	h := 0
+	for i := 0; i < b.size; i++ {
+		for j := 0; j < b.size; j++ {
+			fx := b.Rows[i][j].val % b.size
+			fy := b.Rows[i][j].val / b.size
+			h += solver.CalcMD(j, i, fx, fy)
+			//plog.Info.Println("val =", b.Rows[i][j].val, "fx", fx, "fy", fy, "h", h)
+		}
+	}
+	return h
+	//return b.HeurFun()
 }
 
 func (b *Board) GetMoves() []solver.State {
