@@ -5,6 +5,7 @@ import (
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
+	"github.com/Wouterbeets/n-puzzle/solver"
 	"os"
 )
 
@@ -33,11 +34,6 @@ func main() {
 	b := board.New(size)
 	b.Input(input)
 	plog.Info.Println("board initailised", b)
-	b.Move(board.Up)
-	plog.Info.Println(b.GetH())
-	b.Move(board.Left)
-	plog.Info.Println(b.GetH())
-	b.Move(board.Down)
-	plog.Info.Println(b.GetH())
-	b.Move(board.Right)
+	s := solver.New(b)
+	s.Solve()
 }

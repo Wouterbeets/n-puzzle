@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"io"
-	"os"
+	//"os"
 	"strconv"
 	"unicode/utf8"
 )

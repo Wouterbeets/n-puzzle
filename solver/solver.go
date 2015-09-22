@@ -2,6 +2,7 @@ package solver
 
 import (
 	"container/heap"
+	"github.com/Wouterbeets/n-puzzle/plog"
 	//	"github.com/Wouterbeets/n-puzzle/board"
 )
 
@@ -35,11 +36,17 @@ func (pq *PriorityQueue) Pop() interface{} {
 	return node
 }
 
+type StateNode struct {
+	st State
+	n  *Node
+}
+
 // update modifies the f and value of an Node in the queue.
-func (pq *PriorityQueue) update(node *Node, g, h, f int) {
+func (pq *PriorityQueue) update(node *Node, g, h, f int, p *Node) {
 	node.g = g
 	node.h = h
 	node.f = f
+	node.parent = p
 	heap.Fix(pq, node.index)
 }
 
@@ -48,7 +55,7 @@ type Node struct {
 	f      int
 	g      int
 	h      int
-	state  state
+	key    string
 	index  int
 }
 
@@ -58,21 +65,20 @@ func (n *Node) Copy() *Node {
 		f:      n.f,
 		g:      n.g,
 		h:      n.h,
-		state:  n.state.Copy(),
+		key:    n.key,
 	}
 	return cop
 }
 
-type state interface {
+type State interface {
 	StateString() string
 	GoalString() string
 	GetH() int
-	Copy() state
-	GetMoves() []state
+	GetMoves() []State
 }
 
 type Solver struct {
-	BoardStates  map[string]Node
+	BoardStates  map[string]StateNode
 	OpenList     *PriorityQueue
 	OpenListBool map[string]bool
 	ClosedList   map[string]bool
@@ -89,40 +95,65 @@ func abs(num int) int {
 func CalcMD(x, y, fx, fy int) int {
 	return abs(x-fx) + abs(y-fy)
 }
-func New(st state) *Solver {
+func New(st State) *Solver {
 	s := &Solver{
-		BoardStates:  make(map[string]Node),
+		BoardStates:  make(map[string]StateNode),
 		OpenListBool: make(map[string]bool),
 		ClosedList:   make(map[string]bool),
 	}
 	heap.Init(s.OpenList)
-	currentNode := &Node{parent: nil, state: st.Copy()}
+	currentNode := &Node{
+		parent: nil,
+		key:    st.StateString(),
+		h:      st.GetH(),
+		g:      0,
+	}
+	currentNode.f = currentNode.g + currentNode.h
+	s.BoardStates[st.StateString()] = StateNode{st: st, n: currentNode}
 	heap.Push(s.OpenList, currentNode)
-	s.OpenListBool[currentNode.state.StateString()] = true
+	s.OpenListBool[currentNode.key] = true
 	s.Goal = st.GoalString()
 	return s
 }
 
 func (s *Solver) Solve() {
 	//count := 0
-	//var start state
+	//var start State
 	for len(*s.OpenList) > 0 {
 		cNode := heap.Pop(s.OpenList).(*Node)
-
 		//	if count == 0 {
-		//		start = cNode.state.Copy()
+		//		start = cNode.State.Copy()
 		//	}
-		moves := cNode.state.GetMoves()
+		if cNode.key == s.Goal {
+			plog.Info.Println("solition reached")
+		}
+		//add to closed list and remove from open list
+		s.OpenListBool[cNode.key] = false
+		s.ClosedList[cNode.key] = true
+
+		moves := s.BoardStates[cNode.key].st.GetMoves()
 		for i := 0; i < len(moves); i++ {
 			newNode := &Node{
-				g:     cNode.g + 1,
-				h:     moves[i].GetH(),
-				state: moves[i],
+				g:      cNode.g + 1,
+				h:      moves[i].GetH(),
+				key:    moves[i].StateString(),
+				parent: cNode,
 			}
-			newNode.f = newNode.g - newNode.h
-			//check if newnode was already closed in closed list
-			//check if in open
-			//	yes: check if g is lower. if so, replace
+			newNode.f = newNode.g + newNode.h
+			s.BoardStates[newNode.key] = StateNode{
+				st: moves[i],
+				n:  newNode,
+			}
+			if _, ok := s.ClosedList[newNode.key]; !ok {
+
+				if _, ok := s.OpenListBool[newNode.key]; !ok {
+					s.OpenListBool[newNode.key] = true
+					heap.Push(s.OpenList, newNode)
+				}
+				if _, ok := s.OpenListBool[newNode.key]; ok && s.BoardStates[newNode.key].n.g > newNode.g {
+					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
+				}
+			}
 		}
 	}
 }
