@@ -1,17 +1,20 @@
 package generate
 
 import (
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 	"math/rand"
 )
 
 const (
-	MAX_SIZE = 42
+	MAX_SIZE = 4
 )
 
 // Return a new slice with all map's Values
 // sVal = slice_Value
 func Get_slice(size int) (sVal []int) {
+	fmt.Println("Dans Get_slice:")
+	fmt.Println(size)
 	size = size * size
 	for i := 0; i < size; i++ {
 		sVal = append(sVal, i)
@@ -32,8 +35,11 @@ func Delete_elem(g_slice []int, index int) (n_slice []int) {
 
 func Get_Value(g_slice []int) ([]int, int) {
 	size := len(g_slice)
-	r := rand.New(rand.NewSource(int64(size)))
-	index := r.Int()
+	index := rand.Intn(size)
+	fmt.Println("value de index")
+	fmt.Println(index)
+	fmt.Println("value de size")
+	fmt.Println(size)
 	if index == 0 {
 		index = 1
 	}
@@ -43,8 +49,9 @@ func Get_Value(g_slice []int) ([]int, int) {
 }
 
 func GetMap() (*board.Board, error) {
-	r := rand.New(rand.NewSource(MAX_SIZE))
-	size := r.Int()
+	size := rand.Intn(MAX_SIZE)
+	fmt.Println("In Generate, size:")
+	fmt.Println(size)
 	if size < 3 {
 		size = 3
 	}

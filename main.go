@@ -2,12 +2,15 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/generate"
-	"github.com/Wouterbeets/n-puzzle/input"
+	"math/rand"
+	"time"
+	//	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
-	"github.com/Wouterbeets/n-puzzle/solver"
-	"os"
+	//	"github.com/Wouterbeets/n-puzzle/solver"
+	//	"os"
 )
 
 var (
@@ -27,20 +30,26 @@ func init() {
 // Where you call init function ?
 func main() {
 	var b *board.Board
-	flag.Parse()
-	plog.Activate(ShowInfo, ShowWarning, ShowError, Verbose)
-	size, input, err := input.GetInput(os.Stdin)
+	var err error
+
+	rand.Seed(time.Now().Unix())
+	//	flag.Parse()
+	//	plog.Activate(ShowInfo, ShowWarning, ShowError, Verbose)
+	//	size, input, err := input.GetInput(os.Stdin)
+	fmt.Println("Coucou")
+	//	if err != nil {
+	b, err = generate.GetMap()
 	if err != nil {
-		b, err = generate.GetMap()
-		if err != nil {
-			plog.Error.Println(err)
-			return
-		}
+		plog.Error.Println(err)
+		return
 	} else {
-		b = board.New(size)
-		b.Input(input)
+		fmt.Println(b.String())
 	}
+	//	} else {
+	//		b = board.New(size)
+	//		b.Input(input)
+	//	}
 	plog.Info.Println("board initailised", b)
-	s := solver.New(b)
-	s.Solve()
+	//	s := solver.New(b)
+	//	s.Solve()
 }
