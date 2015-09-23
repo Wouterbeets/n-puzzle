@@ -4,7 +4,6 @@ import (
 	"errors"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"github.com/Wouterbeets/n-puzzle/solver"
-	"math/rand"
 	"strconv"
 	"strings"
 )
@@ -17,23 +16,23 @@ const (
 	MAX_SIZE = 42
 )
 
-type tile struct {
-	val int
+type Tile struct {
+	Val int
 }
 
-func (t tile) String() string {
-	return strconv.Itoa(t.val)
+func (t Tile) String() string {
+	return strconv.Itoa(t.Val)
 }
 
-type row []tile
+type Row []Tile
 
-func (r row) Copy() row {
-	ret := make(row, len(r), len(r))
+func (r Row) Copy() Row {
+	ret := make(Row, len(r), len(r))
 	copy(ret, r)
 	return ret
 }
 
-type Rows []row
+type Rows []Row
 
 func (r Rows) Copy() Rows {
 	ret := make(Rows, len(r), len(r))
@@ -42,7 +41,7 @@ func (r Rows) Copy() Rows {
 }
 
 type Board struct {
-	size    int
+	Size    int
 	Rows    Rows
 	BR      int
 	BC      int
@@ -51,7 +50,7 @@ type Board struct {
 
 func (b *Board) Copy() *Board {
 	r := &Board{
-		size:    b.size,
+		Size:    b.Size,
 		BR:      b.BR,
 		BC:      b.BC,
 		HeurFun: b.HeurFun,
@@ -61,25 +60,25 @@ func (b *Board) Copy() *Board {
 }
 
 func New(size int) *Board {
-	b := &Board{size: size}
+	b := &Board{Size: size}
 	b.initiate()
 	b.SetManDist()
 	return b
 }
 
 func (b *Board) initiate() {
-	b.Rows = make([]row, b.size, b.size)
-	for i := 0; i < b.size; i++ {
-		r := make([]tile, b.size, b.size)
+	b.Rows = make([]Row, b.Size, b.Size)
+	for i := 0; i < b.Size; i++ {
+		r := make([]Tile, b.Size, b.Size)
 		b.Rows[i] = r
 	}
 	plog.Info.Println("board initiated")
 }
 
 func (b *Board) StateString() string {
-	str := strconv.Itoa(b.size) + " "
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
+	str := strconv.Itoa(b.Size) + " "
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
 			str += b.Rows[i][j].String() + " "
 		}
 	}
@@ -87,10 +86,10 @@ func (b *Board) StateString() string {
 }
 
 func (b *Board) GoalString() string {
-	str := strconv.Itoa(b.size) + " "
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
-			str += strconv.Itoa(i*b.size+j) + " "
+	str := strconv.Itoa(b.Size) + " "
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			str += strconv.Itoa(i*b.Size+j) + " "
 		}
 	}
 	return str
@@ -98,8 +97,8 @@ func (b *Board) GoalString() string {
 
 func (b *Board) String() string {
 	str := "\n"
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
 			str += b.Rows[i][j].String() + " "
 		}
 		str = strings.Trim(str, " ")
@@ -108,30 +107,30 @@ func (b *Board) String() string {
 	return str
 }
 
-func (b *Board) Input(values []int) error {
-	err := b.checkInputLen(values)
+func (b *Board) Input(Values []int) error {
+	err := b.checkInputLen(Values)
 	if err != nil {
 		return err
 	}
-	err = b.checkNumbers(values)
+	err = b.checkNumbers(Values)
 	if err != nil {
 		return err
 	}
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
-			b.Rows[i][j].val = values[i*b.size+j]
-			if values[i*b.size+j] == 0 {
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			b.Rows[i][j].Val = Values[i*b.Size+j]
+			if Values[i*b.Size+j] == 0 {
 				b.BR = i
 				b.BC = j
 			}
 		}
 	}
-	plog.Info.Println("input values are succesfully imported to board", values)
+	plog.Info.Println("input Values are succesfully imported to board", Values)
 	return nil
 }
-func (b *Board) checkInputLen(values []int) error {
-	if len(values) != b.size*b.size {
-		err := errors.New("length of board values does not match size of board")
+func (b *Board) checkInputLen(Values []int) error {
+	if len(Values) != b.Size*b.Size {
+		err := errors.New("length of board Values does not match size of board")
 		plog.Error.Println(err)
 		return err
 	}
@@ -139,12 +138,12 @@ func (b *Board) checkInputLen(values []int) error {
 	return nil
 }
 
-func (b *Board) checkNumbers(values []int) error {
-	for i := 0; i < len(values); i++ {
+func (b *Board) checkNumbers(Values []int) error {
+	for i := 0; i < len(Values); i++ {
 		found := false
 		j := 0
-		for j < len(values) {
-			if i == values[j] {
+		for j < len(Values) {
+			if i == Values[j] {
 				found = true
 				break
 			}
@@ -175,8 +174,8 @@ func (b *Board) Move(dir int) error {
 }
 
 func (b *Board) moveUp() error {
-	if b.BR == b.size-1 {
-		err := errors.New("cannot slide up with the blanc tile on bottom row")
+	if b.BR == b.Size-1 {
+		err := errors.New("cannot slide up with the blanc Tile on bottom Row")
 		plog.Warning.Println(err)
 		return err
 	}
@@ -188,7 +187,7 @@ func (b *Board) moveUp() error {
 
 func (b *Board) moveDown() error {
 	if b.BR == 0 {
-		err := errors.New("cannot slide down with the blanc tile on top row")
+		err := errors.New("cannot slide down with the blanc Tile on top Row")
 		plog.Warning.Println(err)
 		return err
 	}
@@ -199,8 +198,8 @@ func (b *Board) moveDown() error {
 }
 
 func (b *Board) moveLeft() error {
-	if b.BC == b.size-1 {
-		err := errors.New("cannot slide left  with the blanc tile on right collumn")
+	if b.BC == b.Size-1 {
+		err := errors.New("cannot slide left  with the blanc Tile on right collumn")
 		plog.Warning.Println(err)
 		return err
 	}
@@ -212,7 +211,7 @@ func (b *Board) moveLeft() error {
 
 func (b *Board) moveRight() error {
 	if b.BC == 0 {
-		err := errors.New("cannot slide right  with the blanc tile on left collumn")
+		err := errors.New("cannot slide right  with the blanc Tile on left collumn")
 		plog.Warning.Println(err)
 		return err
 	}
@@ -228,10 +227,10 @@ func (b *Board) SetManDist() {
 
 func (b *Board) manDist() int {
 	h := 0
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
-			fx := b.Rows[i][j].val % b.size
-			fy := b.Rows[i][j].val / b.size
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			fx := b.Rows[i][j].Val % b.Size
+			fy := b.Rows[i][j].Val / b.Size
 			h += solver.CalcMD(i, j, fx, fy)
 		}
 	}
@@ -262,56 +261,4 @@ func init() {
 	moveMap[Down] = (*Board).moveDown
 	moveMap[Left] = (*Board).moveLeft
 	moveMap[Right] = (*Board).moveRight
-}
-
-// Return a new slice with all map's values
-// sval = slice_value
-func Get_slice(size int) (sval []int) {
-	size = size * size
-	for i := 0; i < size; i++ {
-		sval = append(sval, i)
-	}
-	return sval
-}
-
-func Delete_elem(g_slice []int, index int) (n_slice []int) {
-	size := len(g_slice) - 1
-	for i := 0; i < size; i++ {
-		if i != index {
-			n_slice = append(n_slice, g_slice[i])
-		}
-	}
-	return n_slice
-}
-
-func Get_value(g_slice []int) ([]int, int) {
-	size := len(g_slice)
-	r := rand.New(rand.NewSource(int64(size)))
-	index := r.Int()
-	if index == 0 {
-		index = 1
-	}
-	value := g_slice[index]
-	g_slice = Delete_elem(g_slice, index)
-	return g_slice, value
-}
-
-func GetMap() (*Board, error) {
-	r := rand.New(rand.NewSource(MAX_SIZE))
-	size := r.Int()
-	if size < 3 {
-		size = 3
-	}
-	b := New(size)
-	sval := Get_slice(size)
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
-			sval, b.Rows[i][j].val = Get_value(sval)
-			if b.Rows[i][j].val == 0 {
-				b.BR = i
-				b.BC = j
-			}
-		}
-	}
-	return b, nil
 }
