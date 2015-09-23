@@ -2,6 +2,7 @@ package solver
 
 import (
 	"container/heap"
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"os"
 	//	"github.com/Wouterbeets/n-puzzle/board"
@@ -125,13 +126,26 @@ func New(st State) *Solver {
 func (s *Solver) Solve() {
 
 	plog.Info.Println("Goal is", s.Goal)
+	count := 0
+	start := ""
 	for len(*s.OpenList) > 0 {
 
 		cNode := heap.Pop(s.OpenList).(*Node)
+
+		if count == 0 {
+			start = fmt.Sprintln(s.BoardStates[cNode.key].st)
+		}
+		count++
 		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
 
 		if cNode.key == s.Goal {
 			plog.Info.Println("solition reached")
+			for cNode.parent != nil {
+				plog.Info.Println(s.BoardStates[cNode.key].st)
+				cNode = cNode.parent
+			}
+			plog.Info.Println(s.BoardStates[cNode.key].st)
+			plog.Info.Println(start)
 			os.Exit(1)
 		}
 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
@@ -33,6 +34,7 @@ func main() {
 	}
 	b := board.New(size)
 	b.Input(input)
+	fmt.Println(b)
 	plog.Info.Println("board initailised", b)
 	s := solver.New(b)
 	s.Solve()

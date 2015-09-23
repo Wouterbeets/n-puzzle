@@ -42,11 +42,12 @@ func (r Rows) Copy() Rows {
 }
 
 type Board struct {
-	size    int
-	Rows    Rows
-	BR      int
-	BC      int
-	HeurFun func() int
+	size     int
+	Rows     Rows
+	BR       int
+	BC       int
+	HeurFun  func() int
+	LastMove int
 }
 
 func (b *Board) Copy() *Board {
@@ -90,7 +91,11 @@ func (b *Board) GoalString() string {
 	str := strconv.Itoa(b.size) + " "
 	for i := 0; i < b.size; i++ {
 		for j := 0; j < b.size; j++ {
-			str += strconv.Itoa(i*b.size+j) + " "
+			if i == b.size-1 && j == b.size-1 {
+				str += "0 "
+			} else {
+				str += strconv.Itoa(i*b.size+j+1) + " "
+			}
 		}
 	}
 	return str
@@ -235,11 +240,18 @@ func (b *Board) manDist() int {
 }
 
 func (b *Board) GetH() int {
-	h := 0
+	var (
+		h, fx, fy int
+	)
 	for i := 0; i < b.size; i++ {
 		for j := 0; j < b.size; j++ {
-			fx := b.Rows[i][j].val % b.size
-			fy := b.Rows[i][j].val / b.size
+			if b.Rows[i][j].val == 0 {
+				fx = b.size - 1
+				fy = b.size - 1
+			} else {
+				fx = (b.Rows[i][j].val - 1) % b.size
+				fy = (b.Rows[i][j].val - 1) / b.size
+			}
 			h += solver.CalcMD(j, i, fx, fy)
 			//plog.Info.Println("val =", b.Rows[i][j].val, "fx", fx, "fy", fy, "h", h)
 		}
@@ -260,6 +272,10 @@ func (b *Board) GetMoves() []solver.State {
 		}
 	}
 	return ret
+}
+
+func (b *Board) GetLastMove() int {
+	return b.LastMove
 }
 
 func init() {

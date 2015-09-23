@@ -126,7 +126,7 @@ func TestGetH(t *testing.T) {
 	}{
 		{
 			size:  3,
-			input: []int{1, 0, 2, 3, 4, 5, 6, 7, 8},
+			input: []int{1, 2, 3, 4, 5, 6, 7, 0, 8},
 			want:  2,
 		},
 	}
@@ -138,4 +138,25 @@ func TestGetH(t *testing.T) {
 			t.Error("heuristic function returns wrong h value", result, test.want)
 		}
 	}
+}
+
+func TestGoalStateString(t *testing.T) {
+	var tests = []struct {
+		size  int
+		input []int
+	}{
+		{
+			size:  3,
+			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
+		},
+	}
+	for _, test := range tests {
+		b := New(test.size)
+		b.Input(test.input)
+		if b.StateString() != b.GoalString() {
+			t.Error("goalstring and state string not equal", b.StateString(), b.GoalString())
+
+		}
+	}
+
 }
