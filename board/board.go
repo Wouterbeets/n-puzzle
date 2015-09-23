@@ -2,6 +2,7 @@ package board
 
 import (
 	"errors"
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"github.com/Wouterbeets/n-puzzle/solver"
 	"strconv"
@@ -67,6 +68,8 @@ func New(size int) *Board {
 }
 
 func (b *Board) initiate() {
+	fmt.Println("La size de board: ")
+	fmt.Println(b.Size)
 	b.Rows = make([]Row, b.Size, b.Size)
 	for i := 0; i < b.Size; i++ {
 		r := make([]Tile, b.Size, b.Size)
