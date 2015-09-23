@@ -9,17 +9,17 @@ const (
 	MAX_SIZE = 42
 )
 
-// Return a new slice with all map's values
-// sval = slice_value
-func Get_slice(size int) (sval []int) {
+// Return a new slice with all map's Values
+// sVal = slice_Value
+func Get_slice(size int) (sVal []int) {
 	size = size * size
 	for i := 0; i < size; i++ {
-		sval = append(sval, i)
+		sVal = append(sVal, i)
 	}
-	return sval
+	return sVal
 }
 
-// dval = delete_value
+// dVal = delete_Value
 func Delete_elem(g_slice []int, index int) (n_slice []int) {
 	size := len(g_slice) - 1
 	for i := 0; i < size; i++ {
@@ -30,16 +30,16 @@ func Delete_elem(g_slice []int, index int) (n_slice []int) {
 	return n_slice
 }
 
-func Get_value(g_slice []int) ([]int, int) {
+func Get_Value(g_slice []int) ([]int, int) {
 	size := len(g_slice)
 	r := rand.New(rand.NewSource(int64(size)))
 	index := r.Int()
 	if index == 0 {
 		index = 1
 	}
-	value := g_slice[index]
+	Value := g_slice[index]
 	g_slice = Delete_elem(g_slice, index)
-	return g_slice, value
+	return g_slice, Value
 }
 
 func GetMap() (*board.Board, error) {
@@ -49,11 +49,11 @@ func GetMap() (*board.Board, error) {
 		size = 3
 	}
 	b := board.New(size)
-	sval := Get_slice(size)
-	for i := 0; i < b.size; i++ {
-		for j := 0; j < b.size; j++ {
-			sval, b.Rows[i][j].val = Get_value(sval, size)
-			if b.Rows[i][j].val == 0 {
+	sVal := Get_slice(size)
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			sVal, b.Rows[i][j].Val = Get_Value(sVal)
+			if b.Rows[i][j].Val == 0 {
 				b.BR = i
 				b.BC = j
 			}
