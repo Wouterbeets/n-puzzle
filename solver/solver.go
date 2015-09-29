@@ -43,6 +43,13 @@ type StateNode struct {
 	n  *Node
 }
 
+func abs(num int) int {
+	if num < 0 {
+		num *= -1
+	}
+	return num
+}
+
 // update modifies the f and value of an Node in the queue.
 func (pq *PriorityQueue) update(node *Node, g, h, f int, p *Node) {
 	node.g = g
