@@ -139,13 +139,13 @@ func (s *Solver) Solve() {
 		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
 
 		if cNode.key == s.Goal {
-			plog.Info.Println("solition reached")
+			fmt.Println("solition reached")
 			for cNode.parent != nil {
-				plog.Info.Println(s.BoardStates[cNode.key].st)
+				fmt.Println(s.BoardStates[cNode.key].st)
 				cNode = cNode.parent
 			}
-			plog.Info.Println(s.BoardStates[cNode.key].st)
-			plog.Info.Println(start)
+			fmt.Println(s.BoardStates[cNode.key].st)
+			fmt.Println(start)
 			os.Exit(1)
 		}
 
