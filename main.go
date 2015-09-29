@@ -1,13 +1,17 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
+	"github.com/Wouterbeets/n-puzzle/generate"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"github.com/Wouterbeets/n-puzzle/solver"
+	"math/rand"
 	"os"
+	"time"
 )
 
 var (
@@ -38,23 +42,31 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 		}
 		size, inp, err = input.GetInput(reader)
 	} else {
-		fmt.Println("usage: n-puzzle -f filename.tx\nfor help: n-puzzle -h")
+		err = errors.New("no input")
 	}
 	return
 }
 
+// Where you call init function ?
 func main() {
+	var b *board.Board
+	var err error
+
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
 	size, inp, err := chooseInput(file, stdin)
 	if err != nil {
-		plog.Error.Println(err)
-		return
+		rand.Seed(time.Now().Unix())
+		b, err = generate.GetMap()
+		if err != nil {
+			plog.Error.Println(err)
+			return
+		}
+	} else {
+		b = board.New(size)
+		b.Input(inp)
 	}
-	b := board.New(size)
-	b.Input(inp)
-	fmt.Println(b)
-	plog.Info.Println("board initailised", b)
+	fmt.Println(b.String())
 	s := solver.New(b)
 	s.Solve()
 }

@@ -88,13 +88,6 @@ type Solver struct {
 	Goal         string
 }
 
-func abs(num int) int {
-	if num < 0 {
-		num *= -1
-	}
-	return num
-}
-
 func CalcMD(x, y, fx, fy int) int {
 	return abs(x-fx) + abs(y-fy)
 }
