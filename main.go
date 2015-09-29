@@ -5,13 +5,13 @@ import (
 	"flag"
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
-	"github.com/Wouterbeets/n-puzzle/generate"
+	//	"github.com/Wouterbeets/n-puzzle/generate"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"github.com/Wouterbeets/n-puzzle/solver"
-	"math/rand"
+	//	"math/rand"
 	"os"
-	"time"
+	//	"time"
 )
 
 var (
@@ -50,23 +50,23 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 // Where you call init function ?
 func main() {
 	var b *board.Board
-	var err error
+	//	var err error
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
-	size, inp, err := chooseInput(file, stdin)
-	if err != nil {
-		rand.Seed(time.Now().Unix())
-		b, err = generate.GetMap()
-		if err != nil {
-			plog.Error.Println(err)
-			return
-		}
-	} else {
-		b = board.New(size)
-		b.Input(inp)
-	}
-	fmt.Println(b.String())
+	size, inp, _ := chooseInput(file, stdin)
+	//	if err != nil {
+	//		rand.Seed(time.Now().Unix())
+	//		b, err = generate.GetMap()
+	//		if err != nil {
+	//			plog.Error.Println(err)
+	//			return
+	//		}
+	//	} else {
+	b = board.New(size)
+	b.Input(inp)
+	//	}
+	fmt.Println(b)
 	s := solver.New(b)
 	s.Solve()
 }

@@ -142,19 +142,29 @@ func TestGetH(t *testing.T) {
 
 func TestGoalStateString(t *testing.T) {
 	var tests = []struct {
-		size  int
-		input []int
+		size      int
+		input     []int
+		wantGoal  string
+		wantState string
 	}{
 		{
-			size:  3,
-			input: []int{1, 2, 3, 4, 5, 6, 7, 8, 0},
+			size:      3,
+			input:     []int{1, 2, 4, 3, 5, 6, 7, 8, 0},
+			wantState: "3 1 2 4 3 5 6 7 8 0 ",
+			wantGoal:  "3 1 2 3 4 5 6 7 8 0 ",
+		},
+		{
+			size:      4,
+			input:     []int{1, 2, 4, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0},
+			wantState: "4 1 2 4 3 5 6 7 8 9 10 11 12 13 14 15 0 ",
+			wantGoal:  "4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 0 ",
 		},
 	}
 	for _, test := range tests {
 		b := New(test.size)
 		b.Input(test.input)
-		if b.StateString() != b.GoalString() {
-			t.Error("goalstring and state string not equal", b.StateString(), b.GoalString())
+		if b.StateString() != test.wantState || b.GoalString() != test.wantGoal {
+			t.Error("state =", b.StateString(), "wanted", test.wantState, "goal =", b.GoalString(), "want", test.wantGoal)
 
 		}
 	}
