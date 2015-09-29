@@ -54,7 +54,7 @@ func main() {
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
-	size, inp, _ := chooseInput(file, stdin)
+	size, inp, err := chooseInput(file, stdin)
 	//	if err != nil {
 	//		rand.Seed(time.Now().Unix())
 	//		b, err = generate.GetMap()
