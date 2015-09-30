@@ -3,7 +3,6 @@ package solver
 import (
 	"container/heap"
 	"fmt"
-	"github.com/Wouterbeets/n-puzzle/plog"
 	"os"
 	//	"github.com/Wouterbeets/n-puzzle/board"
 )
@@ -114,76 +113,69 @@ func New(st State) *Solver {
 		g:      0,
 	}
 	currentNode.f = currentNode.g + currentNode.h
-	//plog.Info.Println("made new Node", currentNode)
 	s.BoardStates[st.StateString()] = StateNode{st: st, n: currentNode}
 	heap.Push(s.OpenList, currentNode)
 	s.OpenListBool[currentNode.key] = true
 	s.Goal = st.GoalString()
-	//plog.Info.Printf("made new solver %#v", s)
 	return s
 }
 
-func (s *Solver) Solve() {
-
-	plog.Info.Println("Goal is", s.Goal)
-	count := 0
-	start := ""
-	for len(*s.OpenList) > 0 {
-
-		cNode := heap.Pop(s.OpenList).(*Node)
-
-		if count == 0 {
-			start = fmt.Sprintln(s.BoardStates[cNode.key].st)
-		}
-		count++
-		plog.Info.Println("getting node with lowest f", s.BoardStates[cNode.key].st)
-
-		if cNode.key == s.Goal {
-			fmt.Println("solition reached")
-			for cNode.parent != nil {
-				fmt.Println(s.BoardStates[cNode.key].st)
-				cNode = cNode.parent
-			}
+func (s *Solver) checkSolved(cNode *Node) {
+	if cNode.key == s.Goal {
+		fmt.Println("solition reached")
+		for cNode.parent != nil {
 			fmt.Println(s.BoardStates[cNode.key].st)
-			fmt.Println(start)
-			os.Exit(1)
+			cNode = cNode.parent
 		}
+		fmt.Println(s.BoardStates[cNode.key].st)
+		os.Exit(1)
+	}
+}
 
-		//add to closed list and remove from open list
-		s.OpenListBool[cNode.key] = false
-		s.ClosedList[cNode.key] = true
+func (s *Solver) treatCurrentNode(cNode *Node) {
 
-		moves := s.BoardStates[cNode.key].st.GetMoves()
-		plog.Info.Println("got moves, len is", len(moves))
+	s.checkSolved(cNode)
+	//add to closed list and remove from open list
+	s.OpenListBool[cNode.key] = false
+	s.ClosedList[cNode.key] = true
+}
+
+func (s *Solver) getMoves(cNode *Node) []State {
+	return s.BoardStates[cNode.key].st.GetMoves()
+}
+
+func makeNodeFromState(st State, parentNode *Node) *Node {
+	newNode := &Node{
+		g:      parentNode.g + 10,
+		h:      st.GetH(),
+		key:    st.StateString(),
+		parent: parentNode,
+	}
+	newNode.f = newNode.g + newNode.h
+	return newNode
+}
+
+func (s *Solver) Solve() {
+	for len(*s.OpenList) > 0 {
+		cNode := heap.Pop(s.OpenList).(*Node)
+		s.treatCurrentNode(cNode)
+		moves := s.getMoves(cNode)
 		for i := 0; i < len(moves); i++ {
-			plog.Info.Println("checking move", i)
-			newNode := &Node{
-				g:      cNode.g + 1,
-				h:      moves[i].GetH(),
-				key:    moves[i].StateString(),
-				parent: cNode,
-			}
-			newNode.f = newNode.g + newNode.h
-
+			newNode := makeNodeFromState(moves[i], cNode)
 			// check if node is in closed list
 			if s.ClosedList[newNode.key] == false {
 
 				// ckeck if node is in open list, if not add
 				if s.OpenListBool[newNode.key] == false {
-					plog.Info.Println("node", newNode, "added to open list with f", newNode.f)
 					s.OpenListBool[newNode.key] = true
 					heap.Push(s.OpenList, newNode)
-				} else if s.BoardStates[newNode.key].n.g > newNode.g {
-					plog.Info.Println("node", newNode, "found a shorter way, updated")
-					plog.Info.Println("new", newNode.g, "old = ", s.BoardStates[newNode.key].n.g)
-					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
-				} else {
 
-					plog.Info.Println("new", newNode.g, "old = ", s.BoardStates[newNode.key].n.g)
+					// node is in already in openlist so check if new route is shorter
+				} else if s.BoardStates[newNode.key].n.g > newNode.g {
+					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
 				}
-			} else {
-				plog.Info.Println("node", newNode, "already in closed list f", newNode.f)
 			}
+			//add move to boardstate so we can find it again later
 			s.BoardStates[newNode.key] = StateNode{
 				st: moves[i],
 				n:  newNode,
