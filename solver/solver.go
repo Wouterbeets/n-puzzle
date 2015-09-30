@@ -146,7 +146,7 @@ func (s *Solver) getMoves(cNode *Node) []State {
 
 func makeNodeFromState(st State, parentNode *Node) *Node {
 	newNode := &Node{
-		g:      parentNode.g + 10,
+		g:      parentNode.g + 1,
 		h:      st.GetH(),
 		key:    st.StateString(),
 		parent: parentNode,
@@ -158,15 +158,18 @@ func makeNodeFromState(st State, parentNode *Node) *Node {
 func (s *Solver) Solve() {
 	for len(*s.OpenList) > 0 {
 		cNode := heap.Pop(s.OpenList).(*Node)
+		fmt.Println("len of openlist = ", s.OpenList.Len())
+		fmt.Println("currentNode f= ", cNode.f, s.BoardStates[cNode.key].st)
 		s.treatCurrentNode(cNode)
 		moves := s.getMoves(cNode)
+		fmt.Println("checking moves")
 		for i := 0; i < len(moves); i++ {
 			newNode := makeNodeFromState(moves[i], cNode)
+			fmt.Print("f= ", newNode.f, " ")
 			// check if node is in closed list
-			if s.ClosedList[newNode.key] == false {
-
+			if v, has := s.ClosedList[newNode.key]; v == false || has == false {
 				// ckeck if node is in open list, if not add
-				if s.OpenListBool[newNode.key] == false {
+				if v, has := s.OpenListBool[newNode.key]; v == false || has == false {
 					s.OpenListBool[newNode.key] = true
 					heap.Push(s.OpenList, newNode)
 
