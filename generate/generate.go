@@ -38,12 +38,12 @@ func Get_Value(g_slice []int) ([]int, int) {
 	return g_slice, Value
 }
 
-func GetMap() (*board.Board, error) {
+func GetMap(b *board.Board) (*board.Board, error) {
 	size := rand.Intn(MAX_SIZE + 1)
 	if size < 3 {
 		size = 3
 	}
-	b := board.New(size)
+	b.New(size)
 	sVal := Get_slice(size)
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {

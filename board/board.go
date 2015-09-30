@@ -63,13 +63,6 @@ func (b *Board) Copy() *Board {
 	return r
 }
 
-func New(size int) *Board {
-	b := &Board{Size: size}
-	b.initiate()
-	b.SetManDist()
-	return b
-}
-
 func (b *Board) initiate() {
 	b.Rows = make([]Row, b.Size, b.Size)
 	for i := 0; i < b.Size; i++ {
@@ -77,6 +70,12 @@ func (b *Board) initiate() {
 		b.Rows[i] = r
 	}
 	plog.Info.Println("board initiated")
+}
+
+func (b *Board) New(size int) {
+	b.Size = size
+	b.initiate()
+	b.SetManDist()
 }
 
 func (b *Board) StateString() string {
