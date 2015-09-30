@@ -9,7 +9,8 @@ import (
 	"github.com/Wouterbeets/n-puzzle/generate"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
-	"github.com/Wouterbeets/n-puzzle/solver"
+	//	"github.com/Wouterbeets/n-puzzle/solver"
+	"github.com/Wouterbeets/n-puzzle/solver_2"
 	"math/rand"
 	"os"
 	"time"
@@ -53,6 +54,7 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 
 func main() {
 	b := new(board.Board)
+	svr := new(solver_2.Solver)
 	var err error
 
 	flag.Parse()
@@ -72,8 +74,10 @@ func main() {
 	fmt.Println(b)
 	if checker.CheckerBoard(b) == true {
 		fmt.Println("Map is solvent")
-		s := solver.New(b)
-		s.Solve()
+		svr.Solve_init(b)
+		svr.Solve()
+		//		s := solver.New(b)
+		//		s.Solve()
 	} else {
 		fmt.Println("Map isn't insolvent")
 	}
