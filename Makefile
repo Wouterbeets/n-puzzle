@@ -21,7 +21,7 @@
 #
 
 all: 
-	go clean &&	go build && ./gen 3 > boardExample.txt && cat boardExample.txt && ./n-puzzle -f boardExample.txt 
+	go clean &&	go build && ./gen 3 -u > boardExample.txt && cat boardExample.txt && ./n-puzzle -f boardExample.txt 
 
 test:
 	./gen 3 -u > unsolv3.txt

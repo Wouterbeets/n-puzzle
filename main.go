@@ -60,13 +60,13 @@ func main() {
 	size, inp, err := chooseInput(file, stdin)
 	if err != nil {
 		rand.Seed(time.Now().Unix())
-		b, err = generate.GetMap(b)
+		b, err = generate.GetMap()
 		if err != nil {
 			plog.Error.Println(err)
 			return
 		}
 	} else {
-		b.New(size)
+		b := board.New(size)
 		b.Input(inp)
 	}
 	fmt.Println(b)

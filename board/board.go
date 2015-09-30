@@ -3,7 +3,6 @@ package board
 import (
 	"errors"
 	"github.com/Wouterbeets/n-puzzle/plog"
-	"github.com/Wouterbeets/n-puzzle/solver"
 	"strconv"
 	"strings"
 )
@@ -48,18 +47,17 @@ type Board struct {
 	Rows     Rows
 	BR       int
 	BC       int
-	HeurFun  func() int
+	HeurFun  func(int, int, int, int) int
 }
 
 func (b *Board) Copy() *Board {
 	r := &Board{
-		Size:    b.Size,
-		BR:      b.BR,
-		BC:      b.BC,
-		HeurFun: b.HeurFun,
-		Rows:    b.Rows.Copy(),
+		Size: b.Size,
+		BR:   b.BR,
+		BC:   b.BC,
+		Rows: b.Rows.Copy(),
 	}
-	r.HeurFun = r.manDist
+	r.HeurFun = CalcMD
 	return r
 }
 
@@ -72,10 +70,12 @@ func (b *Board) initiate() {
 	plog.Info.Println("board initiated")
 }
 
-func (b *Board) New(size int) {
+func New(size int) *Board {
+	b := new(Board)
 	b.Size = size
 	b.initiate()
-	b.SetManDist()
+	b.SetOutOfPlace()
+	return b
 }
 
 func (b *Board) StateString() string {
@@ -224,42 +224,52 @@ func (b *Board) moveRight() error {
 }
 
 func (b *Board) SetManDist() {
-	b.HeurFun = b.manDist
+	b.HeurFun = CalcMD
 }
 
-func (b *Board) manDist() int {
-	h := 0
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			fx := b.Rows[i][j].Val % b.Size
-			fy := b.Rows[i][j].Val / b.Size
-			h += solver.CalcMD(j, i, fx, fy)
-		}
+func (b *Board) SetOutOfPlace() {
+	b.HeurFun = OutOfPlace
+}
+
+func abs(num int) int {
+	if num < 0 {
+		num *= -1
 	}
-	return h
+	return num
+}
+
+func CalcMD(x, y, fx, fy int) int {
+	return abs(x-fx) + abs(y-fy)
+}
+
+func OutOfPlace(x, y, fx, fy int) int {
+	if x == fx && y == fy {
+		return 0
+	}
+	return 1
 }
 
 func (b *Board) GetH() int {
 	var (
 		h, fx, fy int
 	)
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			if b.Rows[i][j].Val == 0 {
+	for y := 0; y < b.Size; y++ {
+		for x := 0; x < b.Size; x++ {
+			if b.Rows[y][x].Val == 0 {
 				fx = b.Size - 1
 				fy = b.Size - 1
 			} else {
-				fx = (b.Rows[i][j].Val - 1) % b.Size
-				fy = (b.Rows[i][j].Val - 1) / b.Size
+				fx = (b.Rows[y][x].Val - 1) % b.Size
+				fy = (b.Rows[y][x].Val - 1) / b.Size
 			}
-			h += solver.CalcMD(j, i, fx, fy)
+			h += b.HeurFun(x, y, fx, fy)
 		}
 	}
 	return h
 }
 
-func (b *Board) GetMoves() []solver.State {
-	ret := make([]solver.State, 0, 4)
+func (b *Board) GetMoves() []*Board {
+	ret := make([]*Board, 0, 4)
 	for i := 0; i < 4; i++ {
 		move := b.Copy()
 		err := move.Move(i)
