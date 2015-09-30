@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
+	"github.com/Wouterbeets/n-puzzle/checker"
 	"github.com/Wouterbeets/n-puzzle/generate"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
@@ -34,22 +35,24 @@ func init() {
 
 func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 	if stdin == true {
+		fmt.Println("Use stdin")
 		size, inp, err = input.GetInput(os.Stdin)
 	} else if file != "" {
+		fmt.Println("Use file")
 		reader, err := os.Open(file)
 		if err != nil {
 			os.Exit(1)
 		}
 		size, inp, err = input.GetInput(reader)
 	} else {
+		fmt.Println("Call generate map, empty argument or map invalid")
 		err = errors.New("no input")
 	}
 	return
 }
 
-// Where you call init function ?
 func main() {
-	var b *board.Board
+	b := new(board.Board)
 	var err error
 
 	flag.Parse()
@@ -57,16 +60,21 @@ func main() {
 	size, inp, err := chooseInput(file, stdin)
 	if err != nil {
 		rand.Seed(time.Now().Unix())
-		b, err = generate.GetMap()
+		b, err = generate.GetMap(b)
 		if err != nil {
 			plog.Error.Println(err)
 			return
 		}
 	} else {
-		b = board.New(size)
+		b.New(size)
 		b.Input(inp)
 	}
-	fmt.Println(b.String())
-	s := solver.New(b)
-	s.Solve()
+	fmt.Println(b)
+	if checker.CheckerBoard(b) == true {
+		fmt.Println("Map is solvent")
+		s := solver.New(b)
+		s.Solve()
+	} else {
+		fmt.Println("Map isn't insolvent")
+	}
 }
