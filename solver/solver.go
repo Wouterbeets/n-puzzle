@@ -98,7 +98,7 @@ func (s *Solver) treatCurrentNode(cNode *Node) {
 }
 
 func (s *Solver) getMoves(cNode *Node) []*board.Board {
-	return s.BoardStates[cNode.key].b.GetMoves()
+	return cNode.b.GetMoves()
 }
 
 func makeNodeFromState(b *board.Board, parentNode *Node) *Node {
@@ -107,6 +107,7 @@ func makeNodeFromState(b *board.Board, parentNode *Node) *Node {
 		h:      b.GetH(),
 		key:    b.StateString(),
 		parent: parentNode,
+		b:      b,
 	}
 	newNode.f = newNode.g + newNode.h
 	return newNode
@@ -142,7 +143,7 @@ func (s *Solver) Solve() {
 			newNode := makeNodeFromState(moves[i], cNode)
 			if v, has := s.BoardStates[newNode.key]; has == false || v.open == true {
 				if has == false {
-					v.open = true
+					newNode.open = true
 					heap.Push(s.OpenList, newNode)
 				} else if v.g > newNode.g {
 					s.OpenList.update(v, newNode.g, newNode.h, newNode.f, newNode.parent)
