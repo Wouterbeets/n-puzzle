@@ -82,11 +82,12 @@ type Solver struct {
 func (s *Solver) checkSolved(cNode *Node) {
 	if cNode.key == s.Goal {
 		fmt.Println("solition reached")
+		fmt.Println(s.OpenList.Len())
 		for cNode.parent != nil {
-			fmt.Println(s.BoardStates[cNode.key].b)
+			//fmt.Println(s.BoardStates[cNode.key].b)
 			cNode = cNode.parent
 		}
-		fmt.Println(s.BoardStates[cNode.key].b)
+		//fmt.Println(s.BoardStates[cNode.key].b)
 		os.Exit(1)
 	}
 }
@@ -137,8 +138,6 @@ func New(b *board.Board) *Solver {
 func (s *Solver) Solve() {
 	for len(*s.OpenList) > 0 {
 		cNode := heap.Pop(s.OpenList).(*Node)
-		fmt.Println("len of openlist = ", s.OpenList.Len())
-		fmt.Println("len of closedlist = ", len(s.ClosedList))
 		s.treatCurrentNode(cNode)
 		moves := s.getMoves(cNode)
 		for i := 0; i < len(moves); i++ {

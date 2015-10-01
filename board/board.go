@@ -2,7 +2,7 @@ package board
 
 import (
 	"errors"
-	"github.com/Wouterbeets/n-puzzle/plog"
+	//"github.com/Wouterbeets/n-puzzle/plog"
 	"strconv"
 	"strings"
 )
@@ -38,7 +38,7 @@ func (b *Board) Copy() *Board {
 
 func (b *Board) initiate() {
 	b.Tiles = make([]int, b.Size*b.Size, b.Size*b.Size)
-	plog.Info.Println("board initiated")
+	//plog.Info.Println("board initiated")
 }
 
 func New(size int) *Board {
@@ -109,10 +109,10 @@ func (b *Board) Input(Values []int) error {
 func (b *Board) checkInputLen(Values []int) error {
 	if len(Values) != b.Size*b.Size {
 		err := errors.New("length of board Values does not match size of board")
-		plog.Error.Println(err)
+		//plog.Error.Println(err)
 		return err
 	}
-	plog.Info.Println("length checked")
+	//plog.Info.Println("length checked")
 	return nil
 }
 
@@ -129,11 +129,11 @@ func (b *Board) checkNumbers(Values []int) error {
 		}
 		if found == false {
 			err := errors.New("not all numbers are present in input")
-			plog.Error.Println(err)
+			//plog.Error.Println(err)
 			return err
 		}
 	}
-	plog.Info.Println("numbers checked")
+	//plog.Info.Println("numbers checked")
 	return nil
 }
 
@@ -153,7 +153,7 @@ func (b *Board) Move(dir int) error {
 func (b *Board) moveUp() error {
 	if b.BR == b.Size-1 {
 		err := errors.New("cannot slide up with the blanc Tile on bottom Row")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
 
@@ -165,7 +165,7 @@ func (b *Board) moveUp() error {
 func (b *Board) moveDown() error {
 	if b.BR == 0 {
 		err := errors.New("cannot slide down with the blanc Tile on top Row")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR-1)*b.Size+b.BC] = b.Tiles[(b.BR-1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
@@ -176,7 +176,7 @@ func (b *Board) moveDown() error {
 func (b *Board) moveLeft() error {
 	if b.BC == b.Size-1 {
 		err := errors.New("cannot slide left  with the blanc Tile on right collumn")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC+1] = b.Tiles[b.BR*b.Size+b.BC+1], b.Tiles[b.BR*b.Size+b.BC]
@@ -187,7 +187,7 @@ func (b *Board) moveLeft() error {
 func (b *Board) moveRight() error {
 	if b.BC == 0 {
 		err := errors.New("cannot slide right  with the blanc Tile on left collumn")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC-1] = b.Tiles[b.BR*b.Size+b.BC-1], b.Tiles[b.BR*b.Size+b.BC]
@@ -248,7 +248,7 @@ func (b *Board) GetMoves() []*Board {
 		if err == nil {
 			ret = append(ret, move)
 		} else {
-			plog.Warning.Println("move", i, "not possible")
+			//plog.Warning.Println("move", i, "not possible")
 		}
 	}
 	return ret
