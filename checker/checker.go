@@ -17,7 +17,7 @@ func get_inversion(b *board.Board, y int, x int) int {
 			j = 0
 		}
 		for j < b.Size {
-			if b.Tiles[y*b.Size+x] > b.Tiles[i*b.Size+j] && b.Rows[i][j].Val > 0 {
+			if b.Tiles[y*b.Size+x] > b.Tiles[i*b.Size+j] && b.Tiles[i*b.Size+j] > 0 {
 				sum++
 			}
 			j++
@@ -30,7 +30,7 @@ func get_inversion(b *board.Board, y int, x int) int {
 func get_position_zero(b *board.Board) int {
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			if b.Rows[i][j].Val == 0 {
+			if b.Tiles[i*b.Size+j] == 0 {
 				return b.Size - i
 			}
 		}

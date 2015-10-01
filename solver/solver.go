@@ -138,6 +138,7 @@ func (s *Solver) Solve() {
 	for len(*s.OpenList) > 0 {
 		cNode := heap.Pop(s.OpenList).(*Node)
 		fmt.Println("len of openlist = ", s.OpenList.Len())
+		fmt.Println("len of closedlist = ", len(s.ClosedList))
 		s.treatCurrentNode(cNode)
 		moves := s.getMoves(cNode)
 		for i := 0; i < len(moves); i++ {

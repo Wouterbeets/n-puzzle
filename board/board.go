@@ -26,9 +26,10 @@ type Board struct {
 
 func (b *Board) Copy() *Board {
 	r := &Board{
-		Size: b.Size,
-		BR:   b.BR,
-		BC:   b.BC,
+		Size:  b.Size,
+		BR:    b.BR,
+		BC:    b.BC,
+		Tiles: make([]int, len(b.Tiles), len(b.Tiles)),
 	}
 	copy(r.Tiles, b.Tiles)
 	r.HeurFun = b.HeurFun
@@ -44,7 +45,7 @@ func New(size int) *Board {
 	b := new(Board)
 	b.Size = size
 	b.initiate()
-	b.SetOutOfPlace()
+	b.SetManDist()
 	return b
 }
 
@@ -77,6 +78,16 @@ func (b *Board) String() string {
 	return str
 }
 
+func (b *Board) findBlanc() error {
+	for k, v := range b.Tiles {
+		if v == 0 {
+			b.BR = k / b.Size
+			b.BC = k % b.Size
+			return nil
+		}
+	}
+	return errors.New("no blanc")
+}
 func (b *Board) Input(Values []int) error {
 	err := b.checkInputLen(Values)
 	if err != nil {
@@ -86,7 +97,12 @@ func (b *Board) Input(Values []int) error {
 	if err != nil {
 		return err
 	}
-	b.Tiles = Values
+	b.Tiles = make([]int, len(Values), len(Values))
+	copy(b.Tiles, Values)
+	err = b.findBlanc()
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -140,6 +156,7 @@ func (b *Board) moveUp() error {
 		plog.Warning.Println(err)
 		return err
 	}
+
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR+1)*b.Size+b.BC] = b.Tiles[(b.BR+1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR++
 	return nil
