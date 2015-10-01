@@ -117,21 +117,90 @@ func TestMove(t *testing.T) {
 	}
 
 }
-
-func TestGetH(t *testing.T) {
+func TestOutOfPlace(t *testing.T) {
 	var tests = []struct {
 		size  int
 		input []int
 		want  int
 	}{
 		{
-			size:  3,
-			input: []int{1, 2, 3, 4, 5, 6, 7, 0, 8},
-			want:  2,
+			size: 3,
+			input: []int{
+				1, 2, 3,
+				4, 5, 6,
+				7, 0, 8,
+			},
+			want: 2,
+		},
+		{
+			size: 3,
+			input: []int{
+				2, 3, 1,
+				4, 5, 6,
+				7, 0, 8,
+			},
+			want: 5,
+		},
+		{
+			size: 4,
+			input: []int{
+				5, 2, 3, 0,
+				1, 6, 7, 8,
+				9, 10, 11, 12,
+				13, 14, 15, 4,
+			},
+			want: 4,
 		},
 	}
 	for _, test := range tests {
 		b := New(test.size)
+		b.HeurFun = OutOfPlace
+		b.Input(test.input)
+		result := b.GetH()
+		if result != test.want {
+			t.Error("heuristic function returns wrong h value", result, test.want)
+		}
+	}
+}
+
+func TestMD(t *testing.T) {
+	var tests = []struct {
+		size  int
+		input []int
+		want  int
+	}{
+		{
+			size: 3,
+			input: []int{
+				1, 2, 3,
+				4, 5, 6,
+				7, 0, 8,
+			},
+			want: 2,
+		},
+		{
+			size: 3,
+			input: []int{
+				2, 3, 1,
+				4, 5, 6,
+				7, 0, 8,
+			},
+			want: 6,
+		},
+		{
+			size: 4,
+			input: []int{
+				5, 2, 3, 0,
+				1, 6, 7, 8,
+				9, 10, 11, 12,
+				13, 14, 15, 4,
+			},
+			want: 8,
+		},
+	}
+	for _, test := range tests {
+		b := New(test.size)
+		b.HeurFun = CalcMD
 		b.Input(test.input)
 		result := b.GetH()
 		if result != test.want {

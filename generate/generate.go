@@ -5,10 +5,6 @@ import (
 	"math/rand"
 )
 
-const (
-	MAX_SIZE = 4
-)
-
 // Return a new slice with all map's Values
 // sVal = slice_Value
 func Get_slice(size int) (sVal []int) {
@@ -38,8 +34,7 @@ func Get_Value(g_slice []int) ([]int, int) {
 	return g_slice, Value
 }
 
-func GetMap() (*board.Board, error) {
-	size := rand.Intn(MAX_SIZE + 1)
+func GetMap(size int) (*board.Board, error) {
 	if size < 3 {
 		size = 3
 	}
