@@ -2,9 +2,7 @@ package solver
 
 import (
 	"container/heap"
-	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
-	"os"
 )
 
 type PriorityQueue []*Node
@@ -79,7 +77,7 @@ type Solver struct {
 	Goal         string
 }
 
-func (s *Solver) checkSolved(cNode *Node) {
+func (s *Solver) checkSolved(cNode *Node) bool {
 	if cNode.key == s.Goal {
 		fmt.Println("solition reached")
 		fmt.Println(s.OpenList.Len())
@@ -88,14 +86,18 @@ func (s *Solver) checkSolved(cNode *Node) {
 			cNode = cNode.parent
 		}
 		//fmt.Println(s.BoardStates[cNode.key].b)
-		os.Exit(1)
+		return true
 	}
+	return false
 }
 
-func (s *Solver) treatCurrentNode(cNode *Node) {
-	s.checkSolved(cNode)
+func (s *Solver) treatCurrentNode(cNode *Node) bool {
+	if s.checkSolved(cNode) {
+		return true
+	}
 	s.OpenListBool[cNode.key] = false
 	s.ClosedList[cNode.key] = true
+	return false
 }
 
 func (s *Solver) getMoves(cNode *Node) []*board.Board {
@@ -135,10 +137,12 @@ func New(b *board.Board) *Solver {
 	return s
 }
 
-func (s *Solver) Solve() {
+func (s *Solver) Solve() int {
 	for len(*s.OpenList) > 0 {
 		cNode := heap.Pop(s.OpenList).(*Node)
-		s.treatCurrentNode(cNode)
+		if s.treatCurrentNode(cNode) {
+			return s.OpenList.Len()
+		}
 		moves := s.getMoves(cNode)
 		for i := 0; i < len(moves); i++ {
 			newNode := makeNodeFromState(moves[i], cNode)
@@ -156,4 +160,5 @@ func (s *Solver) Solve() {
 			}
 		}
 	}
+	return s.OpenList.Len()
 }
