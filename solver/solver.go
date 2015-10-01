@@ -2,6 +2,7 @@ package solver
 
 import (
 	"container/heap"
+	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 )
 

@@ -8,9 +8,9 @@ import (
 
 func BenchmarkSolve(bench *testing.B) {
 	inp := []int{
-		1, 2, 3,
-		4, 8, 6,
-		7, 5, 0,
+		6, 3, 0,
+		4, 2, 7,
+		1, 5, 8,
 	}
 	b := board.New(3)
 	b.Input(inp)
