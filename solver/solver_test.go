@@ -2,12 +2,24 @@ package solver
 
 import (
 	"container/heap"
-	"fmt"
-	//"errors"
-
-	//"github.com/Wouterbeets/n-puzzle/plog"
+	"github.com/Wouterbeets/n-puzzle/board"
 	"testing"
 )
+
+func BenchmarkSolve(bench *testing.B) {
+	inp := []int{
+		1, 2, 3,
+		4, 8, 6,
+		7, 5, 0,
+	}
+	b := board.New(3)
+	b.Input(inp)
+	s := New(b)
+	for i := 0; i < bench.N; i++ {
+		s.Solve()
+	}
+
+}
 
 func TestPq(t *testing.T) {
 	var tests = []struct {
