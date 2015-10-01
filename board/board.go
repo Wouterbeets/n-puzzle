@@ -74,7 +74,8 @@ func New(size int) *Board {
 	b := new(Board)
 	b.Size = size
 	b.initiate()
-	b.SetOutOfPlace()
+	//	b.SetOutOfPlace()
+	b.SetManDist()
 	return b
 }
 

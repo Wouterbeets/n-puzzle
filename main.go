@@ -68,7 +68,7 @@ func main() {
 			return
 		}
 	} else {
-		b := board.New(size)
+		b = board.New(size)
 		b.Input(inp)
 	}
 	fmt.Println(b)
