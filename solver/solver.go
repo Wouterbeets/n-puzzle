@@ -58,6 +58,8 @@ type Node struct {
 	h      int
 	key    string
 	index  int
+	b      *board.Board
+	open   bool
 }
 
 func (n *Node) Copy() *Node {
@@ -72,11 +74,9 @@ func (n *Node) Copy() *Node {
 }
 
 type Solver struct {
-	BoardStates  map[string]StateNode
-	OpenList     *PriorityQueue
-	OpenListBool map[string]bool
-	ClosedList   map[string]bool
-	Goal         string
+	BoardStates map[string]*Node
+	OpenList    *PriorityQueue
+	Goal        string
 }
 
 func (s *Solver) checkSolved(cNode *Node) {
@@ -94,8 +94,7 @@ func (s *Solver) checkSolved(cNode *Node) {
 
 func (s *Solver) treatCurrentNode(cNode *Node) {
 	s.checkSolved(cNode)
-	s.OpenListBool[cNode.key] = false
-	s.ClosedList[cNode.key] = true
+	cNode.open = false
 }
 
 func (s *Solver) getMoves(cNode *Node) []*board.Board {
@@ -115,10 +114,8 @@ func makeNodeFromState(b *board.Board, parentNode *Node) *Node {
 
 func New(b *board.Board) *Solver {
 	s := &Solver{
-		BoardStates:  make(map[string]StateNode),
-		OpenListBool: make(map[string]bool),
-		ClosedList:   make(map[string]bool),
-		OpenList:     new(PriorityQueue),
+		BoardStates: make(map[string]*Node),
+		OpenList:    new(PriorityQueue),
 	}
 	heap.Init(s.OpenList)
 	currentNode := &Node{
@@ -126,11 +123,12 @@ func New(b *board.Board) *Solver {
 		key:    b.StateString(),
 		h:      b.GetH(),
 		g:      0,
+		b:      b,
+		open:   true,
 	}
 	currentNode.f = currentNode.g + currentNode.h
-	s.BoardStates[b.StateString()] = StateNode{b: b, n: currentNode}
+	s.BoardStates[currentNode.key] = currentNode
 	heap.Push(s.OpenList, currentNode)
-	s.OpenListBool[currentNode.key] = true
 	s.Goal = b.GoalString()
 	return s
 }
@@ -142,18 +140,15 @@ func (s *Solver) Solve() {
 		moves := s.getMoves(cNode)
 		for i := 0; i < len(moves); i++ {
 			newNode := makeNodeFromState(moves[i], cNode)
-			if v, has := s.ClosedList[newNode.key]; v == false || has == false {
-				if v, has := s.OpenListBool[newNode.key]; v == false || has == false {
-					s.OpenListBool[newNode.key] = true
+			if v, has := s.BoardStates[newNode.key]; has == false || v.open == true {
+				if has == false {
+					v.open = true
 					heap.Push(s.OpenList, newNode)
-				} else if s.BoardStates[newNode.key].n.g > newNode.g {
-					s.OpenList.update(s.BoardStates[newNode.key].n, newNode.g, newNode.h, newNode.f, newNode.parent)
+				} else if v.g > newNode.g {
+					s.OpenList.update(v, newNode.g, newNode.h, newNode.f, newNode.parent)
 				}
 			}
-			s.BoardStates[newNode.key] = StateNode{
-				b: moves[i],
-				n: newNode,
-			}
+			s.BoardStates[newNode.key] = newNode
 		}
 	}
 }
