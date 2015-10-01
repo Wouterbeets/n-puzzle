@@ -140,7 +140,7 @@ func (b *Board) moveUp() error {
 		plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR+1][b.BC] = b.Rows[b.BR+1][b.BC], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR+1)*b.Size+b.BC] = b.Tiles[(b.BR+1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR++
 	return nil
 }
@@ -151,7 +151,7 @@ func (b *Board) moveDown() error {
 		plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR-1][b.BC] = b.Rows[b.BR-1][b.BC], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR-1)*b.Size+b.BC] = b.Tiles[(b.BR-1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR--
 	return nil
 }
@@ -162,7 +162,7 @@ func (b *Board) moveLeft() error {
 		plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC+1] = b.Rows[b.BR][b.BC+1], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC+1] = b.Tiles[b.BR*b.Size+b.BC+1], b.Tiles[b.BR*b.Size+b.BC]
 	b.BC++
 	return nil
 }
@@ -173,7 +173,7 @@ func (b *Board) moveRight() error {
 		plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC-1] = b.Rows[b.BR][b.BC-1], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC-1] = b.Tiles[b.BR*b.Size+b.BC-1], b.Tiles[b.BR*b.Size+b.BC]
 	b.BC--
 	return nil
 }
@@ -210,12 +210,12 @@ func (b *Board) GetH() int {
 	)
 	for y := 0; y < b.Size; y++ {
 		for x := 0; x < b.Size; x++ {
-			if b.Rows[y][x].Val == 0 {
+			if b.Tiles[y*b.Size+x] == 0 {
 				fx = b.Size - 1
 				fy = b.Size - 1
 			} else {
-				fx = (b.Rows[y][x].Val - 1) % b.Size
-				fy = (b.Rows[y][x].Val - 1) / b.Size
+				fx = (b.Tiles[y*b.Size+x] - 1) % b.Size
+				fy = (b.Tiles[y*b.Size+x] - 1) / b.Size
 			}
 			h += b.HeurFun(x, y, fx, fy)
 		}
