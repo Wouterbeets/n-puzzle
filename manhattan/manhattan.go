@@ -1,7 +1,7 @@
 package manhattan
 
 import (
-	"fmt"
+//	"fmt"
 )
 
 func get_cout(tab []int, value int, nbrRow int) int {
@@ -11,10 +11,10 @@ func get_cout(tab []int, value int, nbrRow int) int {
 	for tab[indexValue] != value {
 		indexValue++
 	}
-	fmt.Print("Value good: ")
-	fmt.Print(indexGood)
-	fmt.Print(" | indexValue: ")
-	fmt.Println(indexValue)
+	//	fmt.Print("Value good: ")
+	//	fmt.Print(indexGood)
+	//	fmt.Print(" | indexValue: ")
+	//	fmt.Println(indexValue)
 
 	if indexGood > indexValue {
 		sum = ((indexGood / nbrRow) - (indexValue / nbrRow))
@@ -31,10 +31,10 @@ func get_cout(tab []int, value int, nbrRow int) int {
 			sum += ((indexValue % nbrRow) - (indexGood % nbrRow))
 		}
 	}
-	fmt.Print("Value heur: ")
-	fmt.Println(sum)
-	fmt.Print("to Value: ")
-	fmt.Println(value)
+	//	fmt.Print("Value heur: ")
+	//	fmt.Println(sum)
+	//	fmt.Print("to Value: ")
+	//	fmt.Println(value)
 
 	return sum
 }

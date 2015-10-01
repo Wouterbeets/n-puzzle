@@ -9,6 +9,7 @@ import (
 
 type Node struct {
 	relative   *Node
+	nbrMove    int
 	cout       int
 	StateBoard []int
 }
@@ -27,6 +28,7 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 	fNode := new(Node)
 	fNode.StateBoard = make([]int, Svr.size)
 	fNode.relative = nil
+	fNode.nbrMove = 0
 	Svr.openList = list.New()
 	Svr.closeList = list.New()
 
@@ -39,6 +41,44 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 	}
 	fNode.cout = manhattan.Get_manhattan_dis(fNode.StateBoard, Svr.nbrRow, Svr.size)
 	Svr.openList.PushFront(fNode)
+}
+
+func (Svr *Solver) CheckcloseListexist(nNode *Node) bool {
+	for e := Svr.closeList.Front(); e != nil; e = e.Next() {
+		//		fmt.Println("CheckNode")
+		for i := 0; i < Svr.size; i++ {
+			if e.Value.(*Node).StateBoard[i] != nNode.StateBoard[i] {
+				//				fmt.Println("Found Value")
+				break
+			}
+			//			fmt.Println("Check")
+			if i == Svr.size-1 {
+				return true
+			}
+			//			fmt.Println("End break")
+		}
+		//		fmt.Println("Switch node")
+	}
+	return false
+}
+
+func (Svr *Solver) CheckopenListexist(nNode *Node) bool {
+	for e := Svr.openList.Front(); e != nil; e = e.Next() {
+		//		fmt.Println("CheckNode")
+		for i := 0; i < Svr.size; i++ {
+			if e.Value.(*Node).StateBoard[i] != nNode.StateBoard[i] {
+				//				fmt.Println("Found Value")
+				break
+			}
+			//			fmt.Println("Check")
+			if i == Svr.size-1 {
+				return true
+			}
+			//			fmt.Println("End break")
+		}
+		//		fmt.Println("Switch node")
+	}
+	return false
 }
 
 func (Svr *Solver) CheckSolved() bool {
@@ -56,19 +96,21 @@ func (Svr *Solver) CheckSolved() bool {
 	return true
 }
 
-func (Svr *Solver) AddNode(nNode *Node) {
-	fmt.Println("COUCOU")
-	nNode.cout = manhattan.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow, Svr.size)
-	eNode := Svr.openList.PushFront(nNode)
-	e := eNode.Next()
+func (Svr *Solver) AddNode(nNode *Node, nRelative *Node) {
+	//	eNode := Svr.openList.PushFront(nNode)
+	nNode.relative = nRelative
+	nNode.nbrMove = nRelative.nbrMove + 1
+	nNode.cout = nNode.nbrMove + manhattan.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow, Svr.size)
+	e := Svr.openList.Front()
 	for e != nil {
 		if nNode.cout < e.Value.(*Node).cout {
-			fmt.Println("Add:D")
-			Svr.openList.MoveBefore(eNode, e)
+			//			fmt.Println("Add:D")
+			Svr.openList.InsertBefore(nNode, e)
 			return
 		}
 		e = e.Next()
 	}
+	Svr.openList.PushBack(nNode)
 }
 
 func (Svr *Solver) Move_top() {
@@ -87,8 +129,13 @@ func (Svr *Solver) Move_top() {
 	copy(nNode.StateBoard, nRelative.StateBoard)
 	nNode.StateBoard[i] = nNode.StateBoard[i-Svr.nbrRow]
 	nNode.StateBoard[i-Svr.nbrRow] = 0
-	nNode.relative = nRelative
-	Svr.AddNode(nNode)
+	fmt.Print("Move top: ")
+	fmt.Print(nNode.StateBoard)
+	fmt.Print(" | ")
+	fmt.Println(nRelative.StateBoard)
+	if Svr.CheckcloseListexist(nNode) == false && Svr.CheckopenListexist(nNode) == false {
+		Svr.AddNode(nNode, nRelative)
+	}
 }
 
 func (Svr *Solver) Move_bot() {
@@ -105,14 +152,19 @@ func (Svr *Solver) Move_bot() {
 		return
 	}
 	copy(nNode.StateBoard, nRelative.StateBoard)
-	fmt.Print("Value de i: ")
-	fmt.Println(i)
-	fmt.Print("Value de nbrRow: ")
-	fmt.Println(Svr.nbrRow)
+	//	fmt.Print("Value de i: ")
+	//	fmt.Println(i)
+	//	fmt.Print("Value de nbrRow: ")
+	//	fmt.Println(Svr.nbrRow)
 	nNode.StateBoard[i] = nNode.StateBoard[i+Svr.nbrRow]
 	nNode.StateBoard[i+Svr.nbrRow] = 0
-	nNode.relative = nRelative
-	Svr.AddNode(nNode)
+	fmt.Print("Move bot: ")
+	fmt.Print(nNode.StateBoard)
+	fmt.Print(" | ")
+	fmt.Println(nRelative.StateBoard)
+	if Svr.CheckcloseListexist(nNode) == false && Svr.CheckopenListexist(nNode) == false {
+		Svr.AddNode(nNode, nRelative)
+	}
 }
 
 func (Svr *Solver) Move_left() {
@@ -131,8 +183,13 @@ func (Svr *Solver) Move_left() {
 	copy(nNode.StateBoard, nRelative.StateBoard)
 	nNode.StateBoard[i] = nNode.StateBoard[i-1]
 	nNode.StateBoard[i-1] = 0
-	nNode.relative = nRelative
-	Svr.AddNode(nNode)
+	fmt.Print("Move left: ")
+	fmt.Print(nNode.StateBoard)
+	fmt.Print(" | ")
+	fmt.Println(nRelative.StateBoard)
+	if Svr.CheckcloseListexist(nNode) == false && Svr.CheckopenListexist(nNode) == false {
+		Svr.AddNode(nNode, nRelative)
+	}
 }
 
 func (Svr *Solver) Move_right() {
@@ -151,19 +208,35 @@ func (Svr *Solver) Move_right() {
 	copy(nNode.StateBoard, nRelative.StateBoard)
 	nNode.StateBoard[i] = nNode.StateBoard[i+1]
 	nNode.StateBoard[i+1] = 0
-	nNode.relative = nRelative
-	Svr.AddNode(nNode)
+	fmt.Print("Move right: ")
+	fmt.Print(nNode.StateBoard)
+	fmt.Print(" | ")
+	fmt.Println(nRelative.StateBoard)
+	if Svr.CheckcloseListexist(nNode) == false && Svr.CheckopenListexist(nNode) == false {
+		Svr.AddNode(nNode, nRelative)
+	}
 }
 
 func (Svr *Solver) Solve() {
 	for Svr.CheckSolved() == false {
+		//		fmt.Println("Check false")
 		e := Svr.openList.Front()
-		Svr.closeList.PushBack(e.Value.(*Node))
-		Svr.openList.Remove(e)
-		Svr.Move_top()
-		Svr.Move_bot()
-		Svr.Move_left()
-		Svr.Move_right()
+		if e == nil {
+			fmt.Println("Mince :)")
+			return
+		} else {
+			Svr.closeList.PushBack(e.Value.(*Node))
+			//			fmt.Println("PushBack")
+			Svr.openList.Remove(e)
+			Svr.Move_top()
+			Svr.Move_bot()
+			Svr.Move_left()
+			Svr.Move_right()
+			fmt.Print("Len open: ")
+			fmt.Print(Svr.openList.Len())
+			fmt.Print(" | Len close: ")
+			fmt.Println(Svr.closeList.Len())
+		}
 	}
 	fmt.Print("Found with: ")
 	fmt.Println(Svr.closeList.Len())
