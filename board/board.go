@@ -15,36 +15,10 @@ const (
 	MAX_SIZE = 42
 )
 
-type Tile struct {
-	Val int
-}
-
-func (t Tile) String() string {
-	return strconv.Itoa(t.Val)
-}
-
-type Row []Tile
-
-func (r Row) Copy() Row {
-	ret := make(Row, len(r), len(r))
-	copy(ret, r)
-	return ret
-}
-
-type Rows []Row
-
-func (r Rows) Copy() Rows {
-	ret := make([]Row, len(r))
-	for i := 0; i < len(r); i++ {
-		ret[i] = r[i].Copy()
-	}
-	return ret
-}
-
 type Board struct {
 	LastMove int
 	Size     int
-	Rows     Rows
+	Tiles    []int
 	BR       int
 	BC       int
 	HeurFun  func(int, int, int, int) int
@@ -55,18 +29,14 @@ func (b *Board) Copy() *Board {
 		Size: b.Size,
 		BR:   b.BR,
 		BC:   b.BC,
-		Rows: b.Rows.Copy(),
 	}
-	r.HeurFun = CalcMD
+	copy(r.Tiles, b.Tiles)
+	r.HeurFun = b.HeurFun
 	return r
 }
 
 func (b *Board) initiate() {
-	b.Rows = make([]Row, b.Size, b.Size)
-	for i := 0; i < b.Size; i++ {
-		r := make([]Tile, b.Size, b.Size)
-		b.Rows[i] = r
-	}
+	b.Tiles = make([]int, b.Size*b.Size, b.Size*b.Size)
 	plog.Info.Println("board initiated")
 }
 
@@ -80,25 +50,18 @@ func New(size int) *Board {
 
 func (b *Board) StateString() string {
 	str := strconv.Itoa(b.Size) + " "
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			str += b.Rows[i][j].String() + " "
-		}
+	for i := 0; i < b.Size*b.Size; i++ {
+		str += strconv.Itoa(b.Tiles[i]) + " "
 	}
 	return str
 }
 
 func (b *Board) GoalString() string {
 	str := strconv.Itoa(b.Size) + " "
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			if i == b.Size-1 && j == b.Size-1 {
-				str += "0 "
-			} else {
-				str += strconv.Itoa(i*b.Size+j+1) + " "
-			}
-		}
+	for i := 0; i < b.Size*b.Size-1; i++ {
+		str += strconv.Itoa(i+1) + " "
 	}
+	str += "0 "
 	return str
 }
 
@@ -106,7 +69,7 @@ func (b *Board) String() string {
 	str := "\n"
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			str += b.Rows[i][j].String() + " "
+			str += strconv.Itoa(b.Tiles[b.Size*i+j]) + " "
 		}
 		str = strings.Trim(str, " ")
 		str += "\n"
@@ -123,18 +86,10 @@ func (b *Board) Input(Values []int) error {
 	if err != nil {
 		return err
 	}
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			b.Rows[i][j].Val = Values[i*b.Size+j]
-			if Values[i*b.Size+j] == 0 {
-				b.BR = i
-				b.BC = j
-			}
-		}
-	}
-	plog.Info.Println("input Values are succesfully imported to board", Values)
+	b.Tiles = Values
 	return nil
 }
+
 func (b *Board) checkInputLen(Values []int) error {
 	if len(Values) != b.Size*b.Size {
 		err := errors.New("length of board Values does not match size of board")
