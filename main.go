@@ -11,6 +11,7 @@ import (
 	"github.com/Wouterbeets/n-puzzle/plog"
 	//	"github.com/Wouterbeets/n-puzzle/solver"
 	"github.com/Wouterbeets/n-puzzle/solver_2"
+	//"github.com/Wouterbeets/n-puzzle/solver_3"
 	"math/rand"
 	"os"
 	"time"
@@ -55,6 +56,7 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 func main() {
 	b := new(board.Board)
 	svr := new(solver_2.Solver)
+	//svr := new(solver_3.Solver)
 	var err error
 
 	flag.Parse()

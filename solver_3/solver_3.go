@@ -1,10 +1,10 @@
-package solver_2
+package solver_3
 
 import (
 	"container/list"
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
-	"github.com/Wouterbeets/n-puzzle/manhattan"
+	"github.com/Wouterbeets/n-puzzle/manhattan_3"
 )
 
 const (
@@ -20,77 +20,88 @@ type Node struct {
 	nbrMove    int
 	cout       int
 	status     int
-	StateBoard []int
+	StateBoard [][]int
 }
 
 type Solver struct {
-	size      int
 	nbrRow    int
 	openList  *list.List
 	closeList *list.List
 }
 
+func Get_StateBoard(size int) [][]int {
+	nSlice := make([][]int, size)
+	for i := 0; i < size; i++ {
+		nSlice[i] = make([]int, size)
+	}
+	return nSlice
+}
+
 func (Svr *Solver) Solve_init(b *board.Board) {
-	index := 0
-	Svr.size = b.Size * b.Size
 	Svr.nbrRow = b.Size
 	fNode := new(Node)
-	fNode.StateBoard = make([]int, Svr.size)
+	fNode.StateBoard = Get_StateBoard(Svr.nbrRow)
 	fNode.relative = nil
 	fNode.nbrMove = 0
 	fNode.status = START
 	Svr.openList = list.New()
 	Svr.closeList = list.New()
 
-	index = 0
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			fNode.StateBoard[index] = b.Rows[i][j].Val
-			index++
+			fNode.StateBoard[i][j] = b.Rows[i][j].Val
 		}
 	}
-	//	fNode.cout = manhattan.Get_manhattan_dis(fNode.StateBoard, Svr.nbrRow, Svr.size)
 	Svr.openList.PushFront(fNode)
+}
+
+func Compare_Node(tab1 [][]int, tab2 [][]int, nbrRow int) bool {
+	for i := 0; i < nbrRow; i++ {
+		for j := 0; j < nbrRow; j++ {
+			if tab1[i][j] != tab2[i][j] {
+				return false
+			}
+		}
+	}
+	return true
 }
 
 func (Svr *Solver) CheckcloseListexist(nNode *Node) *list.Element {
 	for e := Svr.closeList.Front(); e != nil; e = e.Next() {
-		for i := 0; i < Svr.size; i++ {
-			if e.Value.(*Node).StateBoard[i] != nNode.StateBoard[i] {
-				break
-			}
-			if i == Svr.size-1 {
-				return e
-			}
+		if Compare_Node(e.Value.(*Node).StateBoard, nNode.StateBoard, Svr.nbrRow) == true {
+			return e
 		}
 	}
 	return nil
+
 }
 
 func (Svr *Solver) CheckopenListexist(nNode *Node) *list.Element {
 	for e := Svr.openList.Front(); e != nil; e = e.Next() {
-		for i := 0; i < Svr.size; i++ {
-			if e.Value.(*Node).StateBoard[i] != nNode.StateBoard[i] {
-				break
-			}
-			if i == Svr.size-1 {
-				return e
-			}
+		if Compare_Node(e.Value.(*Node).StateBoard, nNode.StateBoard, Svr.nbrRow) == true {
+			return e
 		}
 	}
 	return nil
 }
 
 func (Svr *Solver) CheckSolved() bool {
-	max := Svr.size - 1
+	check := 1
 	e := Svr.closeList.Back()
 	if e == nil {
 		return false
 	}
 	node := e.Value.(*Node)
-	for i := 0; i < max; i++ {
-		if node.StateBoard[i] != i+1 {
-			return false
+	for i := 0; i < Svr.nbrRow; i++ {
+		for j := 0; j < Svr.nbrRow; j++ {
+			if node.StateBoard[i][j] != check {
+				return false
+			}
+			if i == Svr.nbrRow-1 && j == Svr.nbrRow-2 {
+				check = 0
+			} else {
+				check++
+			}
 		}
 	}
 	return true
@@ -99,10 +110,10 @@ func (Svr *Solver) CheckSolved() bool {
 func (Svr *Solver) AddNode(nNode *Node, nRelative *Node) {
 	nNode.relative = nRelative
 	nNode.nbrMove = nRelative.nbrMove + 1
-	nNode.cout = nNode.nbrMove + manhattan.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow, Svr.size)
+	nNode.cout = nNode.nbrMove + manhattan_3.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow)
+
 	eOpen := Svr.CheckopenListexist(nNode)
 	eClose := Svr.CheckcloseListexist(nNode)
-	//	if eClose != nil && eClose.Value.(*Node).cout <= nNode.cout {
 	if eClose != nil {
 		return
 	} else if eOpen != nil && eOpen.Value.(*Node).cout <= nNode.cout {
@@ -121,27 +132,30 @@ func (Svr *Solver) AddNode(nNode *Node, nRelative *Node) {
 	Svr.openList.PushBack(nNode)
 }
 
+func Copy_Tab(dest [][]int, src [][]int, nbrRow int) {
+	for i := 0; i < nbrRow; i++ {
+		for j := 0; j < nbrRow; j++ {
+			dest[i][j] = src[i][j]
+		}
+	}
+}
+
 func (Svr *Solver) Move_top() {
 	nRelative := (Svr.closeList.Back()).Value.(*Node)
 
 	if nRelative.status == BOTTOM {
 		return
 	}
-	i := 0
 	nNode := new(Node)
-	nNode.StateBoard = make([]int, Svr.size)
-
+	nNode.StateBoard = Get_StateBoard(Svr.nbrRow)
 	nNode.status = TOP
-	for nRelative.StateBoard[i] != 0 {
-		i++
-	}
-	row := i / Svr.nbrRow
-	if row == 0 {
+	i, j := manhattan_3.Get_positionValue(nRelative.StateBoard, 0, Svr.nbrRow)
+	if i == 0 {
 		return
 	}
-	copy(nNode.StateBoard, nRelative.StateBoard)
-	nNode.StateBoard[i] = nNode.StateBoard[i-Svr.nbrRow]
-	nNode.StateBoard[i-Svr.nbrRow] = 0
+	Copy_Tab(nNode.StateBoard, nRelative.StateBoard, Svr.nbrRow)
+	nNode.StateBoard[i][j] = nRelative.StateBoard[i-1][j]
+	nNode.StateBoard[i-1][j] = 0
 	Svr.AddNode(nNode, nRelative)
 }
 
@@ -151,21 +165,17 @@ func (Svr *Solver) Move_bot() {
 	if nRelative.status == TOP {
 		return
 	}
-	i := 0
 	nNode := new(Node)
-	nNode.StateBoard = make([]int, Svr.size)
+	nNode.StateBoard = Get_StateBoard(Svr.nbrRow)
 
 	nNode.status = BOTTOM
-	for nRelative.StateBoard[i] != 0 {
-		i++
-	}
-	row := i / Svr.nbrRow
-	if row == Svr.nbrRow-1 {
+	i, j := manhattan_3.Get_positionValue(nRelative.StateBoard, 0, Svr.nbrRow)
+	if i == Svr.nbrRow-1 {
 		return
 	}
-	copy(nNode.StateBoard, nRelative.StateBoard)
-	nNode.StateBoard[i] = nNode.StateBoard[i+Svr.nbrRow]
-	nNode.StateBoard[i+Svr.nbrRow] = 0
+	Copy_Tab(nNode.StateBoard, nRelative.StateBoard, Svr.nbrRow)
+	nNode.StateBoard[i][j] = nRelative.StateBoard[i+1][j]
+	nNode.StateBoard[i+1][j] = 0
 	Svr.AddNode(nNode, nRelative)
 }
 
@@ -175,21 +185,17 @@ func (Svr *Solver) Move_left() {
 	if nRelative.status == RIGHT {
 		return
 	}
-	i := 0
 	nNode := new(Node)
-	nNode.StateBoard = make([]int, Svr.size)
+	nNode.StateBoard = Get_StateBoard(Svr.nbrRow)
 
 	nNode.status = LEFT
-	for nRelative.StateBoard[i] != 0 {
-		i++
-	}
-	row := i % Svr.nbrRow
-	if row == 0 {
+	i, j := manhattan_3.Get_positionValue(nRelative.StateBoard, 0, Svr.nbrRow)
+	if j == 0 {
 		return
 	}
-	copy(nNode.StateBoard, nRelative.StateBoard)
-	nNode.StateBoard[i] = nNode.StateBoard[i-1]
-	nNode.StateBoard[i-1] = 0
+	Copy_Tab(nNode.StateBoard, nRelative.StateBoard, Svr.nbrRow)
+	nNode.StateBoard[i][j] = nRelative.StateBoard[i][j-1]
+	nNode.StateBoard[i][j-1] = 0
 	Svr.AddNode(nNode, nRelative)
 }
 
@@ -199,35 +205,17 @@ func (Svr *Solver) Move_right() {
 	if nRelative.status == LEFT {
 		return
 	}
-	i := 0
 	nNode := new(Node)
-	nNode.StateBoard = make([]int, Svr.size)
+	nNode.StateBoard = Get_StateBoard(Svr.nbrRow)
 	nNode.status = RIGHT
-	for nRelative.StateBoard[i] != 0 {
-		i++
-	}
-	row := (i + 1) % Svr.nbrRow
-	if row == 0 {
+	i, j := manhattan_3.Get_positionValue(nRelative.StateBoard, 0, Svr.nbrRow)
+	if j == Svr.nbrRow-1 {
 		return
 	}
-	copy(nNode.StateBoard, nRelative.StateBoard)
-	nNode.StateBoard[i] = nNode.StateBoard[i+1]
-	nNode.StateBoard[i+1] = 0
+	Copy_Tab(nNode.StateBoard, nRelative.StateBoard, Svr.nbrRow)
+	nNode.StateBoard[i][j] = nRelative.StateBoard[i][j+1]
+	nNode.StateBoard[i][j+1] = 0
 	Svr.AddNode(nNode, nRelative)
-}
-
-func (Svr *Solver) PrintResult() {
-	e := Svr.closeList.Back()
-	nRelative := e.Value.(*Node)
-	for nRelative != nil {
-		fmt.Print("Etat board: ")
-		fmt.Println(nRelative.StateBoard)
-		fmt.Print("Cout: ")
-		fmt.Println(nRelative.cout)
-		fmt.Print("Number moves: ")
-		fmt.Println(nRelative.nbrMove)
-		nRelative = nRelative.relative
-	}
 }
 
 func (Svr *Solver) Solve() {
@@ -249,7 +237,6 @@ func (Svr *Solver) Solve() {
 	fmt.Print(" in close list and: ")
 	fmt.Print(Svr.openList.Len())
 	fmt.Println(" in open list")
-	fmt.Println((Svr.closeList.Back()).Value.(*Node).StateBoard)
 	fmt.Println("Result:")
-	Svr.PrintResult()
+	fmt.Println((Svr.closeList.Back()).Value.(*Node).StateBoard)
 }
