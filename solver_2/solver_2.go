@@ -5,14 +5,18 @@ import (
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/manhattan"
+	"github.com/Wouterbeets/n-puzzle/missplacedtiles"
 )
 
 const (
-	START  = 0
-	TOP    = 1
-	BOTTOM = 2
-	LEFT   = 3
-	RIGHT  = 4
+	START              = 0
+	TOP                = 1
+	BOTTOM             = 2
+	LEFT               = 3
+	RIGHT              = 4
+	MANHATTAN          = 1
+	MANHATTAN_CONFLICT = 2
+	MISSPLACEDTILES    = 3
 )
 
 type Node struct {
@@ -28,9 +32,10 @@ type Solver struct {
 	nbrRow    int
 	openList  *list.List
 	closeList *list.List
+	Heuristic func([]int, int, int) int
 }
 
-func (Svr *Solver) Solve_init(b *board.Board) {
+func (Svr *Solver) Solve_init(b *board.Board, Heur int) {
 	Svr.size = b.Size * b.Size
 	Svr.nbrRow = b.Size
 	fNode := new(Node)
@@ -40,7 +45,15 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 	fNode.status = START
 	Svr.openList = list.New()
 	Svr.closeList = list.New()
-
+	if Heur == MANHATTAN {
+		Svr.Heuristic = manhattan.Get_manhattan_dis
+	} else if Heur == MANHATTAN_CONFLICT {
+		Svr.Heuristic = manhattan.Get_manhattan_dis_linear
+	} else if Heur == MISSPLACEDTILES {
+		Svr.Heuristic = missplacedtiles.Get_missplacedTiles
+	} else {
+		Svr.Heuristic = manhattan.Get_manhattan_dis
+	}
 	for index := 0; index < Svr.size; index++ {
 		fNode.StateBoard[index] = b.Tiles[index]
 	}
@@ -93,10 +106,9 @@ func (Svr *Solver) CheckSolved() bool {
 func (Svr *Solver) AddNode(nNode *Node, nRelative *Node) {
 	nNode.relative = nRelative
 	nNode.nbrMove = nRelative.nbrMove + 1
-	nNode.cout = nNode.nbrMove + manhattan.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow, Svr.size)
+	nNode.cout = nNode.nbrMove + Svr.Heuristic(nNode.StateBoard, Svr.nbrRow, Svr.size)
 	eOpen := Svr.CheckopenListexist(nNode)
 	eClose := Svr.CheckcloseListexist(nNode)
-	//	if eClose != nil && eClose.Value.(*Node).cout <= nNode.cout {
 	if eClose != nil {
 		return
 	} else if eOpen != nil && eOpen.Value.(*Node).cout <= nNode.cout {

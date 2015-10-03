@@ -5,14 +5,18 @@ import (
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
 	"github.com/Wouterbeets/n-puzzle/manhattan_3"
+	"github.com/Wouterbeets/n-puzzle/missplacedtiles_3"
 )
 
 const (
-	START  = 0
-	TOP    = 1
-	BOTTOM = 2
-	LEFT   = 3
-	RIGHT  = 4
+	START              = 0
+	TOP                = 1
+	BOTTOM             = 2
+	LEFT               = 3
+	RIGHT              = 4
+	MANHATTAN          = 1
+	MANHATTAN_CONFLICT = 2
+	MISSPLACEDTILES    = 3
 )
 
 type Node struct {
@@ -27,6 +31,7 @@ type Solver struct {
 	nbrRow    int
 	openList  *list.List
 	closeList *list.List
+	Heuristic func([][]int, int) int
 }
 
 func Get_StateBoard(size int) [][]int {
@@ -37,7 +42,7 @@ func Get_StateBoard(size int) [][]int {
 	return nSlice
 }
 
-func (Svr *Solver) Solve_init(b *board.Board) {
+func (Svr *Solver) Solve_init(b *board.Board, Heur int) {
 	Svr.nbrRow = b.Size
 	fNode := new(Node)
 	fNode.StateBoard = Get_StateBoard(Svr.nbrRow)
@@ -46,6 +51,15 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 	fNode.status = START
 	Svr.openList = list.New()
 	Svr.closeList = list.New()
+	if Heur == MANHATTAN {
+		Svr.Heuristic = manhattan_3.Get_manhattan_dis
+	} else if Heur == MANHATTAN_CONFLICT {
+		Svr.Heuristic = manhattan_3.Get_manhattan_dis_linear
+	} else if Heur == MISSPLACEDTILES {
+		Svr.Heuristic = missplacedtiles_3.Get_missplacedTiles
+	} else {
+		Svr.Heuristic = manhattan_3.Get_manhattan_dis
+	}
 
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
@@ -73,7 +87,6 @@ func (Svr *Solver) CheckcloseListexist(nNode *Node) *list.Element {
 		}
 	}
 	return nil
-
 }
 
 func (Svr *Solver) CheckopenListexist(nNode *Node) *list.Element {
@@ -110,7 +123,7 @@ func (Svr *Solver) CheckSolved() bool {
 func (Svr *Solver) AddNode(nNode *Node, nRelative *Node) {
 	nNode.relative = nRelative
 	nNode.nbrMove = nRelative.nbrMove + 1
-	nNode.cout = nNode.nbrMove + manhattan_3.Get_manhattan_dis(nNode.StateBoard, Svr.nbrRow)
+	nNode.cout = nNode.nbrMove + Svr.Heuristic(nNode.StateBoard, Svr.nbrRow)
 
 	eOpen := Svr.CheckopenListexist(nNode)
 	eClose := Svr.CheckcloseListexist(nNode)

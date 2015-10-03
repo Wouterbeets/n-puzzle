@@ -1,14 +1,11 @@
 package manhattan_3
 
-import (
-//"fmt"
-)
+import ()
 
 func Get_positionValue(board [][]int, value int, nbrRow int) (int, int) {
 	for i := 0; i < nbrRow; i++ {
 		for j := 0; j < nbrRow; j++ {
 			if board[i][j] == value {
-				//				fmt.Printf("Check position Value I: %d, J: %d\n", i, j)
 				return i, j
 			}
 		}
@@ -62,15 +59,17 @@ func Get_manhattan_dis(tab [][]int, nbrRow int) int {
 
 func get_conflict(tab [][]int, value int, nbrRow int) int {
 	sum := 0
-	/*	maxConflict := ((idxValue % nbrRow) * nbrRow) + nbrRow
-		value := tab[idxValue]
-		if value >= maxConflict-nbrRow && value < maxConflict {
-			for i := idxValue; i < maxConflict; i++ {
-				if tab[i] >= maxConflict-nbrRow && value > tab[i] {
-					sum += 2
-				}
+
+	iG, _ := Get_GoodIndexValue(tab, value, nbrRow)
+	iV, jV := Get_positionValue(tab, value, nbrRow)
+	if iG == iV {
+		for j := jV; j < nbrRow; j++ {
+			iG, _ = Get_GoodIndexValue(tab, tab[iV][j], nbrRow)
+			if iG == iV && value > tab[iV][j] {
+				sum += 2
 			}
-		}*/
+		}
+	}
 	return sum
 }
 
