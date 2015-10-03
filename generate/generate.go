@@ -38,7 +38,7 @@ func GetMap(size int) (*board.Board, error) {
 	if size < 3 {
 		size = 3
 	}
-	b := board.New(size)
+	b := board.New(size, 1)
 	sVal := Get_slice(size)
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
