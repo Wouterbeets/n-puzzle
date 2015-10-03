@@ -34,11 +34,11 @@ func Get_Value(g_slice []int) ([]int, int) {
 	return g_slice, Value
 }
 
-func GetMap(size int) (*board.Board, error) {
+func GetMap(size int, Heur int) (*board.Board, error) {
 	if size < 3 {
 		size = 3
 	}
-	b := board.New(size)
+	b := board.New(size, Heur)
 	sVal := Get_slice(size)
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
