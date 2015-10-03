@@ -31,7 +31,6 @@ type Solver struct {
 }
 
 func (Svr *Solver) Solve_init(b *board.Board) {
-	index := 0
 	Svr.size = b.Size * b.Size
 	Svr.nbrRow = b.Size
 	fNode := new(Node)
@@ -42,14 +41,9 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 	Svr.openList = list.New()
 	Svr.closeList = list.New()
 
-	index = 0
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			fNode.StateBoard[index] = b.Rows[i][j].Val
-			index++
-		}
+	for index := 0; index < Svr.size; index++ {
+		fNode.StateBoard[index] = b.Tiles[index]
 	}
-	//	fNode.cout = manhattan.Get_manhattan_dis(fNode.StateBoard, Svr.nbrRow, Svr.size)
 	Svr.openList.PushFront(fNode)
 }
 

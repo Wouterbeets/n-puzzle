@@ -49,7 +49,7 @@ func (Svr *Solver) Solve_init(b *board.Board) {
 
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			fNode.StateBoard[i][j] = b.Rows[i][j].Val
+			fNode.StateBoard[i][j] = b.Tiles[(i*b.Size)+j]
 		}
 	}
 	Svr.openList.PushFront(fNode)

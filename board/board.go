@@ -2,7 +2,6 @@ package board
 
 import (
 	"errors"
-	//"github.com/Wouterbeets/n-puzzle/plog"
 	"strconv"
 	"strings"
 )
@@ -12,7 +11,10 @@ const (
 	Down
 	Left
 	Right
-	MAX_SIZE = 42
+	MAX_SIZE           = 42
+	MANHATTAN          = 1
+	MANHATTAN_CONFLICT = 2
+	MISSPLACEDTILES    = 3
 )
 
 type Board struct {
@@ -21,7 +23,7 @@ type Board struct {
 	Tiles    []int
 	BR       int
 	BC       int
-	HeurFun  func(int, int, int, int) int
+	HeurFun  func(int, int, int, int, *Board) int
 }
 
 func (b *Board) Copy() *Board {
@@ -38,14 +40,13 @@ func (b *Board) Copy() *Board {
 
 func (b *Board) initiate() {
 	b.Tiles = make([]int, b.Size*b.Size, b.Size*b.Size)
-	//plog.Info.Println("board initiated")
 }
 
-func New(size int) *Board {
+func New(size int, heur int) *Board {
 	b := new(Board)
 	b.Size = size
 	b.initiate()
-	b.SetManDist()
+	b.SetHeuristic(heur)
 	return b
 }
 
@@ -187,7 +188,6 @@ func (b *Board) moveLeft() error {
 func (b *Board) moveRight() error {
 	if b.BC == 0 {
 		err := errors.New("cannot slide right  with the blanc Tile on left collumn")
-		//plog.Warning.Println(err)
 		return err
 	}
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC-1] = b.Tiles[b.BR*b.Size+b.BC-1], b.Tiles[b.BR*b.Size+b.BC]
@@ -195,12 +195,16 @@ func (b *Board) moveRight() error {
 	return nil
 }
 
-func (b *Board) SetManDist() {
-	b.HeurFun = CalcMD
-}
-
-func (b *Board) SetOutOfPlace() {
-	b.HeurFun = OutOfPlace
+func (b *Board) SetHeuristic(heuristic int) {
+	if heuristic == MANHATTAN {
+		b.HeurFun = CalcMD
+	} else if heuristic == MANHATTAN_CONFLICT {
+		b.HeurFun = CalcMd_linearConflict
+	} else if heuristic == MISSPLACEDTILES {
+		b.HeurFun = OutOfPlace
+	} else {
+		b.HeurFun = CalcMD
+	}
 }
 
 func abs(num int) int {
@@ -210,11 +214,62 @@ func abs(num int) int {
 	return num
 }
 
-func CalcMD(x, y, fx, fy int) int {
+func CalcMD(x, y, fx, fy int, b *Board) int {
 	return abs(x-fx) + abs(y-fy)
 }
 
-func OutOfPlace(x, y, fx, fy int) int {
+func get_conflict(tab []int, idxValue int, nbrRow int) int {
+	sum := 0
+	maxConflict := ((idxValue % nbrRow) * nbrRow) + nbrRow
+	value := tab[idxValue]
+	if value >= maxConflict-nbrRow && value < maxConflict {
+		for i := idxValue; i < maxConflict; i++ {
+			if tab[i] >= maxConflict-nbrRow && value > tab[i] {
+				sum += 2
+			}
+		}
+	}
+	return sum
+}
+
+func (b *Board) LinearConflict(tab []int, value int, nbrRow int) int {
+	sum := 0
+	indexGood := value - 1
+	indexValue := 0
+	for tab[indexValue] != value {
+		indexValue++
+	}
+	if indexGood > indexValue {
+		sum = ((indexGood / nbrRow) - (indexValue / nbrRow))
+		if (indexGood % nbrRow) > (indexValue % nbrRow) {
+			sum += ((indexGood % nbrRow) - (indexValue % nbrRow))
+		} else {
+			sum += ((indexValue % nbrRow) - (indexGood % nbrRow))
+		}
+	} else {
+		sum = ((indexValue / nbrRow) - (indexGood / nbrRow))
+		if (indexGood % nbrRow) > (indexValue % nbrRow) {
+			sum += ((indexGood % nbrRow) - (indexValue % nbrRow))
+		} else {
+			sum += ((indexValue % nbrRow) - (indexGood % nbrRow))
+		}
+	}
+	sum += get_conflict(tab, indexValue, nbrRow)
+	return sum
+}
+
+func CalcMd_linearConflict(x, y, fx, fy int, b *Board) int {
+	sum := 0
+	value := 1
+	max := b.Size * b.Size
+	for value < max {
+		sum += b.LinearConflict(b.Tiles, value, b.Size)
+		value++
+	}
+	return sum
+}
+
+func OutOfPlace(x, y, fx, fy int, b *Board) int {
 	if x == fx && y == fy {
 		return 0
 	}
@@ -234,7 +289,7 @@ func (b *Board) GetH() int {
 				fx = (b.Tiles[y*b.Size+x] - 1) % b.Size
 				fy = (b.Tiles[y*b.Size+x] - 1) / b.Size
 			}
-			h += b.HeurFun(x, y, fx, fy)
+			h += b.HeurFun(x, y, fx, fy, b)
 		}
 	}
 	return h

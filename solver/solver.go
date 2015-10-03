@@ -83,10 +83,8 @@ func (s *Solver) checkSolved(cNode *Node) bool {
 		fmt.Println("solition reached")
 		fmt.Println(s.OpenList.Len())
 		for cNode.parent != nil {
-			//fmt.Println(s.BoardStates[cNode.key].b)
 			cNode = cNode.parent
 		}
-		//fmt.Println(s.BoardStates[cNode.key].b)
 		return true
 	}
 	return false
