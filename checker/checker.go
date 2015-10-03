@@ -4,20 +4,20 @@ import (
 	"github.com/Wouterbeets/n-puzzle/board"
 )
 
-func get_inversion(b *board.Board, ind_i int, ind_j int) int {
+func get_inversion(b *board.Board, y int, x int) int {
 	sum := 0
 	flag := 1
-	j := ind_j
+	j := x
 
-	if b.Rows[ind_i][ind_j].Val == 0 {
+	if b.Tiles[y*b.Size+x] == 0 {
 		return sum
 	}
-	for i := ind_i; i < b.Size; i++ {
+	for i := y; i < b.Size; i++ {
 		if flag == 0 {
 			j = 0
 		}
 		for j < b.Size {
-			if b.Rows[ind_i][ind_j].Val > b.Rows[i][j].Val && b.Rows[i][j].Val > 0 {
+			if b.Tiles[y*b.Size+x] > b.Tiles[i*b.Size+j] && b.Tiles[i*b.Size+j] > 0 {
 				sum++
 			}
 			j++
@@ -30,7 +30,7 @@ func get_inversion(b *board.Board, ind_i int, ind_j int) int {
 func get_position_zero(b *board.Board) int {
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			if b.Rows[i][j].Val == 0 {
+			if b.Tiles[i*b.Size+j] == 0 {
 				return b.Size - i
 			}
 		}

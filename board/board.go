@@ -2,7 +2,7 @@ package board
 
 import (
 	"errors"
-	"github.com/Wouterbeets/n-puzzle/plog"
+	//"github.com/Wouterbeets/n-puzzle/plog"
 	"strconv"
 	"strings"
 )
@@ -15,36 +15,10 @@ const (
 	MAX_SIZE = 42
 )
 
-type Tile struct {
-	Val int
-}
-
-func (t Tile) String() string {
-	return strconv.Itoa(t.Val)
-}
-
-type Row []Tile
-
-func (r Row) Copy() Row {
-	ret := make(Row, len(r), len(r))
-	copy(ret, r)
-	return ret
-}
-
-type Rows []Row
-
-func (r Rows) Copy() Rows {
-	ret := make([]Row, len(r))
-	for i := 0; i < len(r); i++ {
-		ret[i] = r[i].Copy()
-	}
-	return ret
-}
-
 type Board struct {
 	LastMove int
 	Size     int
-	Rows     Rows
+	Tiles    []int
 	BR       int
 	BC       int
 	HeurFun  func(int, int, int, int) int
@@ -52,54 +26,43 @@ type Board struct {
 
 func (b *Board) Copy() *Board {
 	r := &Board{
-		Size: b.Size,
-		BR:   b.BR,
-		BC:   b.BC,
-		Rows: b.Rows.Copy(),
+		Size:  b.Size,
+		BR:    b.BR,
+		BC:    b.BC,
+		Tiles: make([]int, len(b.Tiles), len(b.Tiles)),
 	}
-	r.HeurFun = CalcMD
+	copy(r.Tiles, b.Tiles)
+	r.HeurFun = b.HeurFun
 	return r
 }
 
 func (b *Board) initiate() {
-	b.Rows = make([]Row, b.Size, b.Size)
-	for i := 0; i < b.Size; i++ {
-		r := make([]Tile, b.Size, b.Size)
-		b.Rows[i] = r
-	}
-	plog.Info.Println("board initiated")
+	b.Tiles = make([]int, b.Size*b.Size, b.Size*b.Size)
+	//plog.Info.Println("board initiated")
 }
 
 func New(size int) *Board {
 	b := new(Board)
 	b.Size = size
 	b.initiate()
-	//	b.SetOutOfPlace()
 	b.SetManDist()
 	return b
 }
 
 func (b *Board) StateString() string {
 	str := strconv.Itoa(b.Size) + " "
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			str += b.Rows[i][j].String() + " "
-		}
+	for i := 0; i < b.Size*b.Size; i++ {
+		str += strconv.Itoa(b.Tiles[i]) + " "
 	}
 	return str
 }
 
 func (b *Board) GoalString() string {
 	str := strconv.Itoa(b.Size) + " "
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			if i == b.Size-1 && j == b.Size-1 {
-				str += "0 "
-			} else {
-				str += strconv.Itoa(i*b.Size+j+1) + " "
-			}
-		}
+	for i := 0; i < b.Size*b.Size-1; i++ {
+		str += strconv.Itoa(i+1) + " "
 	}
+	str += "0 "
 	return str
 }
 
@@ -107,7 +70,7 @@ func (b *Board) String() string {
 	str := "\n"
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			str += b.Rows[i][j].String() + " "
+			str += strconv.Itoa(b.Tiles[b.Size*i+j]) + " "
 		}
 		str = strings.Trim(str, " ")
 		str += "\n"
@@ -115,6 +78,16 @@ func (b *Board) String() string {
 	return str
 }
 
+func (b *Board) findBlanc() error {
+	for k, v := range b.Tiles {
+		if v == 0 {
+			b.BR = k / b.Size
+			b.BC = k % b.Size
+			return nil
+		}
+	}
+	return errors.New("no blanc")
+}
 func (b *Board) Input(Values []int) error {
 	err := b.checkInputLen(Values)
 	if err != nil {
@@ -124,25 +97,22 @@ func (b *Board) Input(Values []int) error {
 	if err != nil {
 		return err
 	}
-	for i := 0; i < b.Size; i++ {
-		for j := 0; j < b.Size; j++ {
-			b.Rows[i][j].Val = Values[i*b.Size+j]
-			if Values[i*b.Size+j] == 0 {
-				b.BR = i
-				b.BC = j
-			}
-		}
+	b.Tiles = make([]int, len(Values), len(Values))
+	copy(b.Tiles, Values)
+	err = b.findBlanc()
+	if err != nil {
+		return err
 	}
-	plog.Info.Println("input Values are succesfully imported to board", Values)
 	return nil
 }
+
 func (b *Board) checkInputLen(Values []int) error {
 	if len(Values) != b.Size*b.Size {
 		err := errors.New("length of board Values does not match size of board")
-		plog.Error.Println(err)
+		//plog.Error.Println(err)
 		return err
 	}
-	plog.Info.Println("length checked")
+	//plog.Info.Println("length checked")
 	return nil
 }
 
@@ -159,11 +129,11 @@ func (b *Board) checkNumbers(Values []int) error {
 		}
 		if found == false {
 			err := errors.New("not all numbers are present in input")
-			plog.Error.Println(err)
+			//plog.Error.Println(err)
 			return err
 		}
 	}
-	plog.Info.Println("numbers checked")
+	//plog.Info.Println("numbers checked")
 	return nil
 }
 
@@ -183,10 +153,11 @@ func (b *Board) Move(dir int) error {
 func (b *Board) moveUp() error {
 	if b.BR == b.Size-1 {
 		err := errors.New("cannot slide up with the blanc Tile on bottom Row")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR+1][b.BC] = b.Rows[b.BR+1][b.BC], b.Rows[b.BR][b.BC]
+
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR+1)*b.Size+b.BC] = b.Tiles[(b.BR+1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR++
 	return nil
 }
@@ -194,10 +165,10 @@ func (b *Board) moveUp() error {
 func (b *Board) moveDown() error {
 	if b.BR == 0 {
 		err := errors.New("cannot slide down with the blanc Tile on top Row")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR-1][b.BC] = b.Rows[b.BR-1][b.BC], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR-1)*b.Size+b.BC] = b.Tiles[(b.BR-1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR--
 	return nil
 }
@@ -205,10 +176,10 @@ func (b *Board) moveDown() error {
 func (b *Board) moveLeft() error {
 	if b.BC == b.Size-1 {
 		err := errors.New("cannot slide left  with the blanc Tile on right collumn")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC+1] = b.Rows[b.BR][b.BC+1], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC+1] = b.Tiles[b.BR*b.Size+b.BC+1], b.Tiles[b.BR*b.Size+b.BC]
 	b.BC++
 	return nil
 }
@@ -216,10 +187,10 @@ func (b *Board) moveLeft() error {
 func (b *Board) moveRight() error {
 	if b.BC == 0 {
 		err := errors.New("cannot slide right  with the blanc Tile on left collumn")
-		plog.Warning.Println(err)
+		//plog.Warning.Println(err)
 		return err
 	}
-	b.Rows[b.BR][b.BC], b.Rows[b.BR][b.BC-1] = b.Rows[b.BR][b.BC-1], b.Rows[b.BR][b.BC]
+	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC-1] = b.Tiles[b.BR*b.Size+b.BC-1], b.Tiles[b.BR*b.Size+b.BC]
 	b.BC--
 	return nil
 }
@@ -256,12 +227,12 @@ func (b *Board) GetH() int {
 	)
 	for y := 0; y < b.Size; y++ {
 		for x := 0; x < b.Size; x++ {
-			if b.Rows[y][x].Val == 0 {
+			if b.Tiles[y*b.Size+x] == 0 {
 				fx = b.Size - 1
 				fy = b.Size - 1
 			} else {
-				fx = (b.Rows[y][x].Val - 1) % b.Size
-				fy = (b.Rows[y][x].Val - 1) / b.Size
+				fx = (b.Tiles[y*b.Size+x] - 1) % b.Size
+				fy = (b.Tiles[y*b.Size+x] - 1) / b.Size
 			}
 			h += b.HeurFun(x, y, fx, fy)
 		}
@@ -277,7 +248,7 @@ func (b *Board) GetMoves() []*Board {
 		if err == nil {
 			ret = append(ret, move)
 		} else {
-			plog.Warning.Println("move", i, "not possible")
+			//plog.Warning.Println("move", i, "not possible")
 		}
 	}
 	return ret

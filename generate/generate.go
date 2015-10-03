@@ -42,8 +42,8 @@ func GetMap(size int) (*board.Board, error) {
 	sVal := Get_slice(size)
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
-			sVal, b.Rows[i][j].Val = Get_Value(sVal)
-			if b.Rows[i][j].Val == 0 {
+			sVal, b.Tiles[i*b.Size+j] = Get_Value(sVal)
+			if b.Tiles[i*b.Size+j] == 0 {
 				b.BR = i
 				b.BC = j
 			}

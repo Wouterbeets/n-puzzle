@@ -112,7 +112,7 @@ func TestMove(t *testing.T) {
 		b.Input(test.input)
 		err := b.Move(test.move)
 		if b.String() != test.want || err != nil && test.err == nil || err != nil && test.err == nil {
-			t.Error("Move fail", test.input, "expected", test.want, "\ngot\n", b.String(), "err:", err, "err want", test.err)
+			t.Error("Move fail", test.input, "expected", test.want, "\ngot\n", b.String(), "err:", err, "errWant", test.err, "move", test.move, "\nboard.Tiles =", b.Tiles)
 		}
 	}
 
