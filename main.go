@@ -10,6 +10,8 @@ import (
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
 	"github.com/Wouterbeets/n-puzzle/solver"
+	"github.com/Wouterbeets/n-puzzle/solver_2"
+	"github.com/Wouterbeets/n-puzzle/solver_3"
 	"math/rand"
 	"os"
 	"time"
@@ -54,6 +56,9 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 
 func main() {
 	var b *board.Board
+	svr2 := new(solver_2.Solver)
+	svr3 := new(solver_3.Solver)
+	var err error
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
@@ -76,6 +81,10 @@ func main() {
 		fmt.Println("Map is solvable")
 		s := solver.New(b)
 		s.Solve()
+		svr2.Solve_init(b)
+		svr2.Solve()
+		svr3.Solve_init(b)
+		svr3.Solve()
 	} else {
 		fmt.Println("Map is unsolvable")
 	}
