@@ -54,6 +54,11 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 	return
 }
 
+type choose struct {
+	solv int
+	heur int
+}
+
 func main() {
 	var b *board.Board
 	svr2 := new(solver_2.Solver)
@@ -62,6 +67,12 @@ func main() {
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
+	text := "Choose your heuristix function\ntype 1 for Manhattan Distance\n type 2 for MD with linear conflict\n type 3 for Misplaced Tiles\n"
+	fmt.Println(text)
+	c := choose{}
+	fmt.Scanf("%d", &c.solv)
+	fmt.Println("Choose which memomry method to use:\n type 1 for heap with array's\n type 2 for list with array\n type 3 or list with double array [][]int")
+	fmt.Scanf("%d", &c.heur)
 	size, inp, err := chooseInput(file, stdin)
 	if err != nil {
 		fmt.Println(err)
@@ -73,7 +84,7 @@ func main() {
 			return
 		}
 	} else {
-		b = board.New(size)
+		b = board.New(size, 1)
 		b.Input(inp)
 	}
 	fmt.Println(b)
