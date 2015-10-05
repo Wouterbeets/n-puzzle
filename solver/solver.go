@@ -91,7 +91,11 @@ func (s *Solver) LenCloseList() int {
 func (s *Solver) checkSolved(cNode *Node) bool {
 	nbrMove := 42
 	if cNode.key == s.Goal {
-		fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements\n", s.OpenList.Len(), s.LenCloseList())
+		valClosed := s.LenCloseList()
+		valOpen := s.OpenList.Len()
+		fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements (complexitiy in time)\n", valOpen, valClosed)
+		value := valOpen + valClosed
+		fmt.Printf("Complexity in size: %d\n", value)
 		fmt.Printf("Result found in %d move\n", cNode.g)
 		for i := nbrMove; cNode != nil; i-- {
 			fmt.Printf("Move: %d, with heuristic value: %d\n", cNode.g, cNode.f)

@@ -247,6 +247,11 @@ func (Svr *Solver) Solve() {
 			Svr.Move_right()
 		}
 	}
-	fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements\n", Svr.openList.Len(), Svr.closeList.Len())
+
+	valClosed := Svr.openList.Len()
+	valOpen := Svr.closeList.Len()
+	fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements (complexitiy in time)\n", valOpen, valClosed)
+	value := valOpen + valClosed
+	fmt.Printf("Complexity in size: %d\n", value)
 	Svr.PrintResult()
 }

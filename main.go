@@ -84,7 +84,7 @@ func askHeur() (solv int, heur int) {
 		os.Exit(-1)
 	}
 	plog.Info.Println("chose number", solv, "as solver and", heur, "as heuristic function")
-	if (heur < 1 || heur > 3) && (solv < 1 || solv > 3) {
+	if (heur < 1 || heur > 3) || (solv < 1 || solv > 3) {
 		fmt.Printf("Invalid choice\n")
 		os.Exit(0)
 	}
