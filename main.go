@@ -5,7 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"github.com/Wouterbeets/n-puzzle/board"
-	"github.com/Wouterbeets/n-puzzle/checker"
 	"github.com/Wouterbeets/n-puzzle/generate"
 	"github.com/Wouterbeets/n-puzzle/input"
 	"github.com/Wouterbeets/n-puzzle/plog"
@@ -45,6 +44,7 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 		plog.Info.Println("Using file")
 		reader, err := os.Open(file)
 		if err != nil {
+			plog.Error.Println(err)
 			os.Exit(1)
 		}
 		size, inp, err = input.GetInput(reader)
@@ -54,49 +54,61 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 	return
 }
 
-type choose struct {
-	solv int
-	heur int
+func handleErr(err error) {
+	if err != nil {
+		plog.Error.Println(err)
+		os.Exit(-1)
+	}
+}
+
+func askHeur() (solv int, heur int) {
+	fmt.Println("Choose your heuristic functionn")
+	fmt.Println("\ttype 1 for Manhattan Distance")
+	fmt.Println("\ttype 2 for MD with linear conflict")
+	fmt.Println("\ttype 3 for Misplaced Tiles\n\t:")
+	fmt.Scanf("%d", &heur)
+	fmt.Println("Choose which memomry method to use")
+	fmt.Println("\ttype 1 for heap with array's")
+	fmt.Println("\ttype 2 for list with array")
+	fmt.Println("\ttype 3 or list with double array [][]int\n\t:")
+	fmt.Scanf("%d", &solv)
+	plog.Info.Println("chose number", solv, "as solver and", heur, "as heuristic function")
+	return
 }
 
 func main() {
 	var b *board.Board
 	svr2 := new(solver_2.Solver)
 	svr3 := new(solver_3.Solver)
-	var err error
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
-	text := "Choose your heuristix function\ntype 1 for Manhattan Distance\n type 2 for MD with linear conflict\n type 3 for Misplaced Tiles\n"
-	fmt.Println(text)
-	c := choose{}
-	fmt.Scanf("%d", &c.solv)
-	fmt.Println("Choose which memomry method to use:\n type 1 for heap with array's\n type 2 for list with array\n type 3 or list with double array [][]int")
-	fmt.Scanf("%d", &c.heur)
-	size, inp, err := chooseInput(file, stdin)
-	if err != nil {
+	solv, heur := askHeur()
+	if size, inp, err := chooseInput(file, stdin); err != nil {
 		fmt.Println(err)
 		plog.Info.Println("generating map")
 		rand.Seed(time.Now().Unix())
-		b, err = generate.GetMap(mapSize)
-		if err != nil {
-			plog.Error.Println(err)
-			return
-		}
+		b, err = generate.GetMap(mapSize, heur)
+		handleErr(err)
 	} else {
-		b = board.New(size, 1)
-		b.Input(inp)
+		b = board.New(size, heur)
+		err := b.Input(inp)
+		handleErr(err)
 	}
-	fmt.Println(b)
-	if checker.CheckerBoard(b) == true {
-		fmt.Println("Map is solvable")
+	plog.Info.Println(b)
+	if solv == 1 {
 		s := solver.New(b)
 		s.Solve()
-		svr2.Solve_init(b)
+	} else if solv == 2 {
+		svr2.Solve_init(b, heur)
 		svr2.Solve()
-		svr3.Solve_init(b)
+
+	} else if solv == 3 {
+		svr3.Solve_init(b, heur)
 		svr3.Solve()
+
 	} else {
-		fmt.Println("Map is unsolvable")
+		fmt.Println("no valid solver selected")
+		return
 	}
 }

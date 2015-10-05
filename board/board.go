@@ -2,6 +2,7 @@ package board
 
 import (
 	"errors"
+	"github.com/Wouterbeets/n-puzzle/plog"
 	"strconv"
 	"strings"
 )
@@ -104,16 +105,19 @@ func (b *Board) Input(Values []int) error {
 	if err != nil {
 		return err
 	}
+	if b.CheckBoard() == false {
+		return errors.New("Board unsolvable")
+	}
 	return nil
 }
 
 func (b *Board) checkInputLen(Values []int) error {
 	if len(Values) != b.Size*b.Size {
 		err := errors.New("length of board Values does not match size of board")
-		//plog.Error.Println(err)
+		plog.Error.Println(err)
 		return err
 	}
-	//plog.Info.Println("length checked")
+	plog.Info.Println("length checked")
 	return nil
 }
 
@@ -130,11 +134,11 @@ func (b *Board) checkNumbers(Values []int) error {
 		}
 		if found == false {
 			err := errors.New("not all numbers are present in input")
-			//plog.Error.Println(err)
+			plog.Error.Println(err)
 			return err
 		}
 	}
-	//plog.Info.Println("numbers checked")
+	plog.Info.Println("numbers checked")
 	return nil
 }
 
@@ -157,7 +161,6 @@ func (b *Board) moveUp() error {
 		//plog.Warning.Println(err)
 		return err
 	}
-
 	b.Tiles[b.BR*b.Size+b.BC], b.Tiles[(b.BR+1)*b.Size+b.BC] = b.Tiles[(b.BR+1)*b.Size+b.BC], b.Tiles[b.BR*b.Size+b.BC]
 	b.BR++
 	return nil
@@ -295,11 +298,29 @@ func (b *Board) GetH() int {
 	return h
 }
 
+func (b *Board) GetPosMoves() (moves []int) {
+	moves = make([]int, 0, 4)
+	if b.BR < b.Size-1 {
+		moves = append(moves, 0)
+	}
+	if b.BR > 0 {
+		moves = append(moves, 1)
+	}
+	if b.BC > 0 {
+		moves = append(moves, 2)
+	}
+	if b.BC < b.Size-1 {
+		moves = append(moves, 3)
+	}
+	return
+}
+
 func (b *Board) GetMoves() []*Board {
 	ret := make([]*Board, 0, 4)
-	for i := 0; i < 4; i++ {
+	moves := b.GetPosMoves()
+	for _, v := range moves {
 		move := b.Copy()
-		err := move.Move(i)
+		err := move.Move(v)
 		if err == nil {
 			ret = append(ret, move)
 		} else {
@@ -311,6 +332,62 @@ func (b *Board) GetMoves() []*Board {
 
 func (b *Board) GetLastMove() int {
 	return b.LastMove
+}
+
+func (b *Board) get_inversion(y int, x int) int {
+	sum := 0
+	flag := 1
+	j := x
+
+	if b.Tiles[y*b.Size+x] == 0 {
+		return sum
+	}
+	for i := y; i < b.Size; i++ {
+		if flag == 0 {
+			j = 0
+		}
+		for j < b.Size {
+			if b.Tiles[y*b.Size+x] > b.Tiles[i*b.Size+j] && b.Tiles[i*b.Size+j] > 0 {
+				sum++
+			}
+			j++
+		}
+		flag = 0
+	}
+	return sum
+}
+
+func (b *Board) get_position_zero() int {
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			if b.Tiles[i*b.Size+j] == 0 {
+				return b.Size - i
+			}
+		}
+	}
+	return 1
+}
+
+func (b *Board) CheckBoard() bool {
+	sum := 0
+	for i := 0; i < b.Size; i++ {
+		for j := 0; j < b.Size; j++ {
+			sum += b.get_inversion(i, j)
+		}
+	}
+	if b.Size%2 == 0 {
+		row := b.get_position_zero()
+		if row%2 == 0 && sum%2 != 0 {
+			return true
+		} else if row%2 != 0 && sum%2 == 0 {
+			return true
+		}
+	} else {
+		if sum%2 == 0 {
+			return true
+		}
+	}
+	return false
 }
 
 func init() {

@@ -34,11 +34,13 @@ func Get_Value(g_slice []int) ([]int, int) {
 	return g_slice, Value
 }
 
-func GetMap(size int, Heur int) (*board.Board, error) {
+func GetMap(size int, heur int) (*board.Board, error) {
+	var err error
+
 	if size < 3 {
 		size = 3
 	}
-	b := board.New(size, Heur)
+	b := board.New(size, heur)
 	sVal := Get_slice(size)
 	for i := 0; i < b.Size; i++ {
 		for j := 0; j < b.Size; j++ {
@@ -47,6 +49,12 @@ func GetMap(size int, Heur int) (*board.Board, error) {
 				b.BR = i
 				b.BC = j
 			}
+		}
+	}
+	if b.CheckBoard() == false {
+		b, err = GetMap(size, heur)
+		if err != nil {
+			return nil, err
 		}
 	}
 	return b, nil
