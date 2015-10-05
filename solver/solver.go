@@ -78,11 +78,24 @@ type Solver struct {
 	Goal        string
 }
 
+func (s *Solver) LenCloseList() int {
+	sum := 0
+	for _, v := range s.BoardStates {
+		if v.open == false {
+			sum++
+		}
+	}
+	return sum
+}
+
 func (s *Solver) checkSolved(cNode *Node) bool {
+	nbrMove := 42
 	if cNode.key == s.Goal {
-		fmt.Println("solition reached")
-		fmt.Println(s.OpenList.Len())
-		for cNode.parent != nil {
+		fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements\n", s.OpenList.Len(), s.LenCloseList())
+		fmt.Printf("Result found in %d move\n", cNode.g)
+		for i := nbrMove; cNode != nil; i-- {
+			fmt.Printf("Move: %d, with heuristic value: %d\n", cNode.g, cNode.f)
+			fmt.Println(cNode.b.Tiles)
 			cNode = cNode.parent
 		}
 		return true

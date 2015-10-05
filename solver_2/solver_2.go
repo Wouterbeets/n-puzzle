@@ -225,13 +225,10 @@ func (Svr *Solver) Move_right() {
 func (Svr *Solver) PrintResult() {
 	e := Svr.closeList.Back()
 	nRelative := e.Value.(*Node)
-	for nRelative != nil {
-		fmt.Print("Etat board: ")
+	fmt.Printf("Result found in %d move\n", nRelative.nbrMove)
+	for i := nRelative.nbrMove; nRelative != nil; i-- {
+		fmt.Printf("Move: %d, with heuristic value: %d\n", i, nRelative.cout)
 		fmt.Println(nRelative.StateBoard)
-		fmt.Print("Cout: ")
-		fmt.Println(nRelative.cout)
-		fmt.Print("Number moves: ")
-		fmt.Println(nRelative.nbrMove)
 		nRelative = nRelative.relative
 	}
 }
@@ -250,12 +247,6 @@ func (Svr *Solver) Solve() {
 			Svr.Move_right()
 		}
 	}
-	fmt.Print("Found with: ")
-	fmt.Print(Svr.closeList.Len())
-	fmt.Print(" in close list and: ")
-	fmt.Print(Svr.openList.Len())
-	fmt.Println(" in open list")
-	fmt.Println((Svr.closeList.Back()).Value.(*Node).StateBoard)
-	fmt.Println("Result:")
+	fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements\n", Svr.openList.Len(), Svr.closeList.Len())
 	Svr.PrintResult()
 }

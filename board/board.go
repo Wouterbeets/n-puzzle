@@ -317,14 +317,11 @@ func (b *Board) GetPosMoves() (moves []int) {
 
 func (b *Board) GetMoves() []*Board {
 	ret := make([]*Board, 0, 4)
-	moves := b.GetPosMoves()
-	for _, v := range moves {
+	for i := 0; i < 4; i++ {
 		move := b.Copy()
-		err := move.Move(v)
+		err := move.Move(i)
 		if err == nil {
 			ret = append(ret, move)
-		} else {
-			//plog.Warning.Println("move", i, "not possible")
 		}
 	}
 	return ret
