@@ -38,16 +38,12 @@ func init() {
 	flag.BoolVar(&showError, "e", true, "show error")
 	flag.BoolVar(&showInfo, "i", false, "show info")
 	flag.BoolVar(&verbose, "v", false, "show everything")
-	flag.BoolVar(&stdin, "s", false, "expecting input from stdin")
 	flag.StringVar(&file, "f", "", "input from file, usage:\"n-puzzle -f=filename.txt\"")
 	flag.IntVar(&mapSize, "size", 3, "size of generated map")
 }
 
 func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
-	if stdin == true {
-		plog.Info.Println("Using stdin")
-		size, inp, err = input.GetInput(os.Stdin)
-	} else if file != "" {
+	if file != "" {
 		plog.Info.Println("Using file")
 		reader, err := os.Open(file)
 		if err != nil {
@@ -56,7 +52,7 @@ func chooseInput(filename string, stdin bool) (size int, inp []int, err error) {
 		}
 		size, inp, err = input.GetInput(reader)
 	} else {
-		err = errors.New("no input from file or stdin")
+		err = errors.New("no input from file")
 	}
 	return
 }
@@ -93,13 +89,6 @@ func askHeur() (solv int, heur int) {
 		os.Exit(0)
 	}
 	return
-}
-
-func check_Value(value int) bool {
-	if value < 1 || value > 3 {
-		return false
-	}
-	return true
 }
 
 func main() {
