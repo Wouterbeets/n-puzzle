@@ -79,10 +79,13 @@ type Solver struct {
 }
 
 func (s *Solver) checkSolved(cNode *Node) bool {
+	nbrMove := 42
 	if cNode.key == s.Goal {
-		fmt.Println("solition reached")
-		fmt.Println(s.OpenList.Len())
-		for cNode.parent != nil {
+		fmt.Printf("Result Found !\nOpen list contains %d elements.\nClose list contains %d elements\n", s.OpenList.Len(), s.OpenList.Len())
+		fmt.Printf("Result found in %d move\n", 0)
+		for i := nbrMove; cNode.parent != nil; i-- {
+			fmt.Printf("Move: %d, with heuristic value: %d\n", 0, 0)
+			fmt.Println(cNode.b.Tiles)
 			cNode = cNode.parent
 		}
 		return true
