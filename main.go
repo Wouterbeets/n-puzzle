@@ -80,17 +80,19 @@ func main() {
 	var b *board.Board
 	svr2 := new(solver_2.Solver)
 	svr3 := new(solver_3.Solver)
+	solv, heur := 0, 0
 
 	flag.Parse()
 	plog.Activate(showInfo, showWarning, showError, verbose)
-	solv, heur := askHeur()
 	if size, inp, err := chooseInput(file, stdin); err != nil {
 		fmt.Println(err)
 		plog.Info.Println("generating map")
 		rand.Seed(time.Now().Unix())
+		solv, heur = askHeur()
 		b, err = generate.GetMap(mapSize, heur)
 		handleErr(err)
 	} else {
+		solv, heur = askHeur()
 		b = board.New(size, heur)
 		err := b.Input(inp)
 		handleErr(err)
